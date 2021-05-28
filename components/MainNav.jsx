@@ -6,33 +6,20 @@ import {
     Route,
     Link
 } from 'react-router-dom';
-import AboutPage from './pages/AboutPage';
-import WorkPage from "./pages/WorkPage";
-import ContactPage from "./pages/ContactPage";
 
-const MainNav = ({ navLinkHandler, paneSlideUp }) => {
+const MainNav = ({ setPage }) => {
     return (
-        <>
-            <Router>
-                <Nav>
-                    <li>
-                        <Link to="/work">View My Work</Link>
+        <Nav>
+            <li onClick={() => { setPage('work') }}>
+                View My Work
                     </li>
-                    <li>
-                        <Link onClick={navLinkHandler} to="/about">Hear About Me</Link>
+            <li onClick={() => { setPage('about') }}>
+                Hear About Me
                     </li>
-                    <li>
-                        <Link onClick={navLinkHandler} to="/contact">Contact Me</Link>
+            <li onClick={() => { setPage('contact') }}>
+                Contact Me
                     </li>
-                </Nav>
-
-                <Switch> 
-                    <Route exact path="/work"  component={WorkPage} />
-                    <Route exact path="/about"  component={AboutPage} />
-                    <Route exact path="/contact"  component={ContactPage} />
-                </Switch>
-            </Router>
-        </>
+        </Nav>
     );
 }
 

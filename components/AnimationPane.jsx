@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const AnimationPane = ({ active, paneSlideUp }) => {
-    
+    // use a useEffect to apply a class with animation!
     if(active){
         paneSlideUp(".animation-pane");
     }

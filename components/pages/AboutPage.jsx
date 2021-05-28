@@ -30,11 +30,9 @@ const AboutPage = () => {
 export default AboutPage;
 
 const Pane = styled.div`
-    position: absolute;
-    top: 0;
     padding: 5rem;
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     overflow-y: scroll;
     background: linear-gradient(270deg, #e55d87, #5fc3e4);
     background-size: 400% 400%;

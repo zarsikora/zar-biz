@@ -4,24 +4,30 @@ import gsap from "gsap";
 import Message from "./Message";
 import rightArrow from "./../img/icon/arrow-right.png";
 
-const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, messages, isNav, showNav }) => {
+const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, messages, isNav, setPage }) => {
     const [currentMessage, setCurrentMessage] = useState(0);
     const [isFirstMessage, setIsFirstMessage] = useState(true);
+    const [ arrowActive, setArrowActive ] = useState(true);
 
+
+
+    // lines might have a better state representation
     let lines = messages.lines;
-    let nav = messages.navigation;
+    let hasNav = messages.navigation;
 
     console.log(messages);
 
     if (isActive) {
         gsap.to(".speech-box", { duration: .3, opacity: .8 });
     }
-
+    // This def needs to be refactored into separate functions
     const handleClick = () => {
         if (currentMessage < lines.length - 1) {
             setCurrentMessage(currentMessage + 1);
-        } else if (nav) {
-            showNav();
+        // this says if there are no more messages and a nav exists
+        } else if (hasNav) {
+            setPage('nav');
+            setArrowActive(false);
             setIsSpriteInSpeechBox(true);
         }
     };
@@ -36,7 +42,7 @@ const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, mess
                 isSpriteInSpeechBox={isSpriteInSpeechBox}
             />
 
-            {!isNav && <Next onClick={handleClick}><img src={rightArrow} /></Next>}
+            {arrowActive && <Next onClick={handleClick}><img src={rightArrow} /></Next>}
         </Box>
     );
 }
