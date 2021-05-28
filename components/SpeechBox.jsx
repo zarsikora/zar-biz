@@ -4,10 +4,13 @@ import gsap from "gsap";
 import Message from "./Message";
 import rightArrow from "./../img/icon/arrow-right.png";
 
-const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, messages, isNav, showNav }) => {
+const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, messages, isNav, setPage }) => {
     const [currentMessage, setCurrentMessage] = useState(0);
     const [isFirstMessage, setIsFirstMessage] = useState(true);
+    const [ arrowActive, setArrowActive ] = useState(true);
 
+
+    // these should be state
     let lines = messages.lines;
     let nav = messages.navigation;
 
@@ -20,8 +23,10 @@ const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, mess
     const handleClick = () => {
         if (currentMessage < lines.length - 1) {
             setCurrentMessage(currentMessage + 1);
+        // this says if there are no more messages and a nav exists
         } else if (nav) {
-            showNav();
+            setPage('nav');
+            setArrowActive(false);
             setIsSpriteInSpeechBox(true);
         }
     };
@@ -36,7 +41,7 @@ const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, mess
                 isSpriteInSpeechBox={isSpriteInSpeechBox}
             />
 
-            {!isNav && <Next onClick={handleClick}><img src={rightArrow} /></Next>}
+            {arrowActive && <Next onClick={handleClick}><img src={rightArrow} /></Next>}
         </Box>
     );
 }

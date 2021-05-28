@@ -14,25 +14,34 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 //TODO: connect dialogue change to speechbox
 //TODO: add work page dialogue to array and get it working
 const App = () => {
+    // 
     const [spriteClicked, setSpriteClicked] = useState(false);
+    // this state is not 
     const [paneActive, setPaneActive] = useState(false);
     const [isWorkActive, setIsWorkActive] = useState(false);
     const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
     const [isSpriteInSpeechBox, setIsSpriteInSpeechBox] = useState(false);
-    const [isNav, setIsNav] = useState(true);
-    let speechBoxData = dialogueObj.intro;
+    const [ speechBoxData, isSpeechBoxData ] = useState(dialogueObj.intro)
+    const [isNav, setIsNav] = useState(false);
+    // are these pages? things like panes take up this space
+    const [ page, setPage ] = useState('home')
+
     let initialSpriteClick = true;
 
+    // does this do way too much?
     const spriteClickHandler = () => {
         if(initialSpriteClick){
             setSpriteClicked(true);
-            setPaneActive(true);
-    
+            setPage('pane');
+            // setPaneActive(true);
+            // useEffect for animation change here too
             setTimeout(() => {
                 setIsSpeechBoxActive(true);
             }, 500);
+        // this else block never runs for some reason, need to figure that out
         } else {
-            speechBoxData = dialogueObj.work;
+            // check this works
+            setSpeechBoxData(dialogueObj.work);
             console.log(speechBoxData);
             setIsSpeechBoxActive(true);
         }
@@ -47,6 +56,7 @@ const App = () => {
         setIsSpeechBoxActive(false);
     }
 
+    // I'm not sure this sounds like a function, could be state? 
     const paneSlideUp = (pane) => {
         gsap.to(pane, {duration: .7, scaleY: 1, transformOrigin: 'bottom'});
     }
@@ -60,21 +70,26 @@ const App = () => {
         <div className="app" data-barba="container">
             <GlobalStyle />
             <AudioButton />
-            <Jumbotron text="HOWDY" color="#CEFF00" />
-
+            { (page === 'home') && <Jumbotron text="HOWDY" color="#CEFF00" /> }
+            {/* Consider pane details if we want them. */}
+            {/* { (page === 'pane') && <AnimationPane active={true} paneSlideUp={paneSlideUp} /> } */}
+            {
+                (page === 'nav') && <MainNav 
+                    navLinkHandler={navLinkHandler} 
+                    paneSlideUp={paneSlideUp}
+                />
+            }
+            {/*  active is not needed as props, refactor out.  */}
             <Sprite
                 isSpriteInSpeechBox={isSpriteInSpeechBox}
+                // active seems like a really bad name, this makes me think 
+                // it is a component render boolean
                 active={spriteClicked}
                 spriteClickHandler={spriteClickHandler}
             />
 
-            <AnimationPane active={paneActive} paneSlideUp={paneSlideUp} />
+            
 
-            {isNav && <MainNav 
-                        navLinkHandler={navLinkHandler} 
-                        paneSlideUp={paneSlideUp}
-                    />
-            }
 
             {isSpeechBoxActive &&
                 <SpeechBox
@@ -82,9 +97,8 @@ const App = () => {
                     setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
                     isSpriteInSpeechBox={isSpriteInSpeechBox}
                     messages={speechBoxData}
-                    setIsNav={setIsNav}
+                    setPage={setPage}
                     isNav={isNav}
-                    showNav={showNav}
                 />
             }
         </div>

@@ -11,6 +11,7 @@ const Message = ({ isFirstMessage, setIsFirstMessage, message }) => {
                 }}
                 onInit={(typewriter) => {
                     if (isFirstMessage) {
+                        // Factor out timeout
                         setTimeout(() => {
                             typewriter.typeString(message)
                                 .start();
