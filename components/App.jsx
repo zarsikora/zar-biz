@@ -8,6 +8,9 @@ import Sprite from './Sprite';
 import AnimationPane from './AnimationPane';
 import SpeechBox from "./SpeechBox";
 import MainNav from "./MainNav";
+import AboutPage from './pages/AboutPage';
+import WorkPage from "./pages/WorkPage";
+import ContactPage from "./pages/ContactPage";
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 
 //SPRITE SHIFTING FUNC
@@ -16,21 +19,19 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 const App = () => {
     // 
     const [spriteClicked, setSpriteClicked] = useState(false);
-    // this state is not 
-    const [paneActive, setPaneActive] = useState(false);
-    const [isWorkActive, setIsWorkActive] = useState(false);
     const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
     const [isSpriteInSpeechBox, setIsSpriteInSpeechBox] = useState(false);
-    const [ speechBoxData, isSpeechBoxData ] = useState(dialogueObj.intro)
+    const [speechBoxData, isSpeechBoxData] = useState(dialogueObj.intro)
+    // I think this wants to be refactored to some other name
     const [isNav, setIsNav] = useState(false);
     // are these pages? things like panes take up this space
-    const [ page, setPage ] = useState('home')
+    const [page, setPage] = useState('home')
 
     let initialSpriteClick = true;
 
     // does this do way too much?
     const spriteClickHandler = () => {
-        if(initialSpriteClick){
+        if (initialSpriteClick) {
             setSpriteClicked(true);
             setPage('pane');
             // setPaneActive(true);
@@ -38,18 +39,14 @@ const App = () => {
             setTimeout(() => {
                 setIsSpeechBoxActive(true);
             }, 500);
-        // this else block never runs for some reason, need to figure that out
+            // this else block never runs for some reason, need to figure that out
         } else {
             // check this works
             setSpeechBoxData(dialogueObj.work);
             console.log(speechBoxData);
             setIsSpeechBoxActive(true);
         }
-        
-    }
 
-    const showNav = () => {
-        setIsNav(true);
     }
 
     const removeSpeechBox = () => {
@@ -57,28 +54,22 @@ const App = () => {
     }
 
     // I'm not sure this sounds like a function, could be state? 
-    const paneSlideUp = (pane) => {
-        gsap.to(pane, {duration: .7, scaleY: 1, transformOrigin: 'bottom'});
-    }
 
-    const navLinkHandler = () => {
-        setIsWorkActive(true);
-        removeSpeechBox();
+
+    const pages = {
+        home: <Jumbotron text="HOWDY" color="#CEFF00" />,
+        nav: <MainNav setPage={setPage} />,
+        work: <WorkPage />,
+        about: <AboutPage />,
+        contact: <ContactPage />
     }
 
     return (
-        <div className="app" data-barba="container">
+        <>
             <GlobalStyle />
             <AudioButton />
-            { (page === 'home') && <Jumbotron text="HOWDY" color="#CEFF00" /> }
-            {/* Consider pane details if we want them. */}
-            {/* { (page === 'pane') && <AnimationPane active={true} paneSlideUp={paneSlideUp} /> } */}
-            {
-                (page === 'nav') && <MainNav 
-                    navLinkHandler={navLinkHandler} 
-                    paneSlideUp={paneSlideUp}
-                />
-            }
+            {pages[page]}
+
             {/*  active is not needed as props, refactor out.  */}
             <Sprite
                 isSpriteInSpeechBox={isSpriteInSpeechBox}
@@ -87,9 +78,6 @@ const App = () => {
                 active={spriteClicked}
                 spriteClickHandler={spriteClickHandler}
             />
-
-            
-
 
             {isSpeechBoxActive &&
                 <SpeechBox
@@ -101,7 +89,7 @@ const App = () => {
                     isNav={isNav}
                 />
             }
-        </div>
+        </>
     );
 }
 

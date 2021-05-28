@@ -10,21 +10,22 @@ const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, mess
     const [ arrowActive, setArrowActive ] = useState(true);
 
 
-    // these should be state
+
+    // lines might have a better state representation
     let lines = messages.lines;
-    let nav = messages.navigation;
+    let hasNav = messages.navigation;
 
     console.log(messages);
 
     if (isActive) {
         gsap.to(".speech-box", { duration: .3, opacity: .8 });
     }
-
+    // This def needs to be refactored into separate functions
     const handleClick = () => {
         if (currentMessage < lines.length - 1) {
             setCurrentMessage(currentMessage + 1);
         // this says if there are no more messages and a nav exists
-        } else if (nav) {
+        } else if (hasNav) {
             setPage('nav');
             setArrowActive(false);
             setIsSpriteInSpeechBox(true);

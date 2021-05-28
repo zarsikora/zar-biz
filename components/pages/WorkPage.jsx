@@ -4,14 +4,14 @@ import gsap from "gsap";
 
 //TODO: Add DF
 const WorkPage = () => {
-    gsap.to(".work-pane", {duration: .7, scaleY: 1, transformOrigin: 'bottom'});
+    gsap.to(".work-pane", { duration: .7, scaleY: 1, transformOrigin: 'bottom' });
 
-    return(
+    return (
         <Pane className="test">
             <Header>Work</Header>
             <WorkList>
-                { workData.map((work) => {
-                    return(
+                {workData.map((work) => {
+                    return (
                         <WorkBlock key={work.name} bg={work.bg} text={work.text}>
                             <a target="_BLANK" href={work.link} >
                                 <span>{work.name}</span>
@@ -29,12 +29,9 @@ const WorkPage = () => {
 export default WorkPage;
 
 const Pane = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
     padding: 5rem;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: block;
     overflow-y: scroll;
     background-color: #f9f9f9;
@@ -49,7 +46,7 @@ const Header = styled.h1`
     // opacity: 0;
 `
 
-const WorkList = styled.ul `
+const WorkList = styled.ul`
     list-style: none;
     padding: 0;
     text-align: center;
@@ -63,7 +60,7 @@ const WorkList = styled.ul `
     }
 `
 
-const WorkBlock = styled.li `
+const WorkBlock = styled.li`
     background-color: ${props => props.bg};
     width: 50%;
     margin: 2rem auto;
@@ -110,27 +107,27 @@ const workData = [
         link: "https://www.alaradcapital.com/",
         bg: "#27331d",
         text: "#bd8e65",
-        img : "./../../img/work/alarad-peek.png"
+        img: "./../../img/work/alarad-peek.png"
     },
     {
         name: "Steel Root",
         link: "https://steelroot.us/",
         bg: "#181d40",
-        text: "#db5150", 
-        img : "./../../img/work/sr-peek.png"
+        text: "#db5150",
+        img: "./../../img/work/sr-peek.png"
     },
     {
         name: "TransHealth",
         link: "https://www.transhealth.org/",
         bg: "#96b0c5",
         text: "#2a275b",
-        img : "./../../img/work/th-peek.png"
+        img: "./../../img/work/th-peek.png"
     },
     {
         name: "ThinkForward Financial",
         link: "https://thinkforwardfinancial.com/home/",
         bg: "#e16e37",
         text: "#fff",
-        img : "./../../img/work/tff-peek.png"
+        img: "./../../img/work/tff-peek.png"
     }
 ]
