@@ -8,12 +8,7 @@ import Sprite from './Sprite';
 import AnimationPane from './AnimationPane';
 import SpeechBox from "./SpeechBox";
 import MainNav from "./MainNav";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-} from 'react-router-dom';
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 
 //SPRITE SHIFTING FUNC
 //TODO: connect dialogue change to speechbox
@@ -24,15 +19,15 @@ const App = () => {
     const [isWorkActive, setIsWorkActive] = useState(false);
     const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
     const [isSpriteInSpeechBox, setIsSpriteInSpeechBox] = useState(false);
-    const [isNav, setIsNav] = useState(false);
+    const [isNav, setIsNav] = useState(true);
     let speechBoxData = dialogueObj.intro;
     let initialSpriteClick = true;
 
     const spriteClickHandler = () => {
-        if (initialSpriteClick) {
+        if(initialSpriteClick){
             setSpriteClicked(true);
             setPaneActive(true);
-
+    
             setTimeout(() => {
                 setIsSpeechBoxActive(true);
             }, 500);
@@ -41,7 +36,7 @@ const App = () => {
             console.log(speechBoxData);
             setIsSpeechBoxActive(true);
         }
-
+        
     }
 
     const showNav = () => {
@@ -53,7 +48,7 @@ const App = () => {
     }
 
     const paneSlideUp = (pane) => {
-        gsap.to(pane, { duration: .7, scaleY: 1, transformOrigin: 'bottom' });
+        gsap.to(pane, {duration: .7, scaleY: 1, transformOrigin: 'bottom'});
     }
 
     const navLinkHandler = () => {
@@ -62,93 +57,38 @@ const App = () => {
     }
 
     return (
-        <Router>
-            <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/users">Users</Link>
-                        </li>
-                    </ul>
-                </nav>
+        <div className="app" data-barba="container">
+            <GlobalStyle />
+            <AudioButton />
+            <Jumbotron text="HOWDY" color="#CEFF00" />
 
-                {/* A <Switch> looks through its children <Route>s and
-              renders the first one that matches the current URL. */}
-                <Switch>
-                    <Route path="/about">
-                        <About />
-                    </Route>
-                    <Route path="/users">
-                        <Users />
-                    </Route>
-                    <Route path="/">
-                        <Home />
-                    </Route>
-                </Switch>
-            </div>
-        </Router>
+            <Sprite
+                isSpriteInSpeechBox={isSpriteInSpeechBox}
+                active={spriteClicked}
+                spriteClickHandler={spriteClickHandler}
+            />
+
+            <AnimationPane active={paneActive} paneSlideUp={paneSlideUp} />
+
+            {isNav && <MainNav 
+                        navLinkHandler={navLinkHandler} 
+                        paneSlideUp={paneSlideUp}
+                    />
+            }
+
+            {isSpeechBoxActive &&
+                <SpeechBox
+                    isActive={isSpeechBoxActive}
+                    setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
+                    isSpriteInSpeechBox={isSpriteInSpeechBox}
+                    messages={speechBoxData}
+                    setIsNav={setIsNav}
+                    isNav={isNav}
+                    showNav={showNav}
+                />
+            }
+        </div>
     );
-
-    function Home() {
-        return <h2>Home</h2>;
-    }
-
-    function About() {
-        return <h2>About</h2>;
-    }
-
-    function Users() {
-        return <h2>Users</h2>;
-    }
-        // <div className="app" data-barba="container">
-        //     <Router>
-        //         <Switch>
-        //             <Route exact path ='/'>
-        //                 <h2>Small pee a pee pe</h2>
-        //             </Route>
-        //             <Route path='/workz'>
-        //                 <h1>Big kaka popooo</h1>
-        //             </Route>
-        //         </Switch>
-        //     </Router>
-
-        //     <GlobalStyle />
-        //     <AudioButton />
-        //     <Jumbotron text="HOWDY" color="#CEFF00" />
-
-        //     <Sprite
-        //         isSpriteInSpeechBox={isSpriteInSpeechBox}
-        //         active={spriteClicked}
-        //         spriteClickHandler={spriteClickHandler}
-        //     />
-
-        //     <AnimationPane active={paneActive} paneSlideUp={paneSlideUp} />
-
-        //     {isNav && <MainNav 
-        //                 navLinkHandler={navLinkHandler} 
-        //                 paneSlideUp={paneSlideUp}
-        //             />
-        //     }
-
-        //     {isSpeechBoxActive &&
-        //         <SpeechBox
-        //             isActive={isSpeechBoxActive}
-        //             setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
-        //             isSpriteInSpeechBox={isSpriteInSpeechBox}
-        //             messages={speechBoxData}
-        //             setIsNav={setIsNav}
-        //             isNav={isNav}
-        //             showNav={showNav}
-        //         />
-        //     }
-        // </div>
-
 }
 
 export default App;
