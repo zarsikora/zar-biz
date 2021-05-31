@@ -24,8 +24,9 @@ const App = () => {
     const [speechBoxData, isSpeechBoxData] = useState(dialogueObj.intro)
     // I think this wants to be refactored to some other name
     const [isNav, setIsNav] = useState(false);
+    
     // are these pages? things like panes take up this space
-    const [page, setPage] = useState('home')
+    // const [page, setPage] = useState('home')
 
     let initialSpriteClick = true;
 
@@ -53,9 +54,6 @@ const App = () => {
         setIsSpeechBoxActive(false);
     }
 
-    // I'm not sure this sounds like a function, could be state? 
-
-
     const pages = {
         home: <Jumbotron text="HOWDY" color="#CEFF00" />,
         nav: <MainNav setPage={setPage} />,
@@ -66,29 +64,49 @@ const App = () => {
 
     return (
         <>
-            <GlobalStyle />
-            <AudioButton />
-            {pages[page]}
+            <Router>
+                <GlobalStyle />
+                <AudioButton />
+                {/* {pages[page]} */}
 
-            {/*  active is not needed as props, refactor out.  */}
-            <Sprite
-                isSpriteInSpeechBox={isSpriteInSpeechBox}
-                // active seems like a really bad name, this makes me think 
-                // it is a component render boolean
-                active={spriteClicked}
-                spriteClickHandler={spriteClickHandler}
-            />
-
-            {isSpeechBoxActive &&
-                <SpeechBox
-                    isActive={isSpeechBoxActive}
-                    setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
+                {/*  active is not needed as props, refactor out.  */}
+                <Sprite
                     isSpriteInSpeechBox={isSpriteInSpeechBox}
-                    messages={speechBoxData}
-                    setPage={setPage}
-                    isNav={isNav}
+                    // active seems like a really bad name, this makes me think 
+                    // it is a component render boolean
+                    active={spriteClicked}
+                    spriteClickHandler={spriteClickHandler}
                 />
-            }
+
+                {isSpeechBoxActive &&
+                    <SpeechBox
+                        isActive={isSpeechBoxActive}
+                        setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
+                        isSpriteInSpeechBox={isSpriteInSpeechBox}
+                        messages={speechBoxData}
+                        setPage={setPage}
+                        isNav={isNav}
+                    />
+                }
+
+                <Switch>
+                    <Route exact path="/">
+                        <Jumbotron text="HOWDY" color="#CEFF00" />
+                    </Route>
+                    <Route path="/nav">
+                        <MainNav setPage={setPage} />
+                    </Route>
+                    <Route path="/work">
+                        <WorkPage />
+                    </Route>
+                    <Route path="/about">
+                        <AboutPage />
+                    </Route>
+                    <Route path="/contact">
+                        <ContactPage />
+                    </Route>
+                </Switch>
+            </Router>
         </>
     );
 }

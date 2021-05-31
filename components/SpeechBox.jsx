@@ -9,8 +9,6 @@ const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, mess
     const [isFirstMessage, setIsFirstMessage] = useState(true);
     const [ arrowActive, setArrowActive ] = useState(true);
 
-
-
     // lines might have a better state representation
     let lines = messages.lines;
     let hasNav = messages.navigation;
