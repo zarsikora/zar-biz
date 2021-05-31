@@ -1,11 +1,9 @@
 // the worms control the spice 
 import React, { useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
-import gsap from "gsap";
 import AudioButton from './AudioButton';
 import Jumbotron from "./Jumbotron";
 import Sprite from './Sprite';
-import AnimationPane from './AnimationPane';
 import SpeechBox from "./SpeechBox";
 import MainNav from "./MainNav";
 import AboutPage from './pages/AboutPage';
@@ -15,80 +13,76 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 
 //SPRITE SHIFTING FUNC
 //TODO: connect dialogue change to speechbox
-//TODO: add work page dialogue to array and get it working
 const App = () => {
-    // 
+    // change name to initial click later
     const [spriteClicked, setSpriteClicked] = useState(false);
-    const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
+    const [isInitialSpriteClick, setIsInitialSpriteClick] = useState(true);
     const [isSpriteInSpeechBox, setIsSpriteInSpeechBox] = useState(false);
+    const [isSpriteNavButton, setIsSpriteNavButton] = useState(false);
+
+    const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
     const [speechBoxData, isSpeechBoxData] = useState(dialogueObj.intro)
+    
     // I think this wants to be refactored to some other name
     const [isNav, setIsNav] = useState(false);
-    // are these pages? things like panes take up this space
-    const [page, setPage] = useState('home')
-
-    let initialSpriteClick = true;
 
     // does this do way too much?
     const spriteClickHandler = () => {
-        if (initialSpriteClick) {
+        if (isInitialSpriteClick) {
             setSpriteClicked(true);
-            setPage('pane');
-            // setPaneActive(true);
             // useEffect for animation change here too
             setTimeout(() => {
                 setIsSpeechBoxActive(true);
             }, 500);
-            // this else block never runs for some reason, need to figure that out
+            setIsInitialSpriteClick(false);
         } else {
-            // check this works
-            setSpeechBoxData(dialogueObj.work);
-            console.log(speechBoxData);
-            setIsSpeechBoxActive(true);
+            setIsNav(true);
         }
 
     }
 
-    const removeSpeechBox = () => {
-        setIsSpeechBoxActive(false);
-    }
-
-    // I'm not sure this sounds like a function, could be state? 
-
-
-    const pages = {
-        home: <Jumbotron text="HOWDY" color="#CEFF00" />,
-        nav: <MainNav setPage={setPage} />,
-        work: <WorkPage />,
-        about: <AboutPage />,
-        contact: <ContactPage />
-    }
-
     return (
         <>
-            <GlobalStyle />
-            <AudioButton />
-            {pages[page]}
+            <Router>
+                <GlobalStyle />
+                <AudioButton />
 
-            {/*  active is not needed as props, refactor out.  */}
-            <Sprite
-                isSpriteInSpeechBox={isSpriteInSpeechBox}
-                // active seems like a really bad name, this makes me think 
-                // it is a component render boolean
-                active={spriteClicked}
-                spriteClickHandler={spriteClickHandler}
-            />
+                {isNav && <MainNav setIsNav={setIsNav} setIsSpeechBoxActive={setIsSpeechBoxActive} />}
 
-            {isSpeechBoxActive &&
-                <SpeechBox
-                    isActive={isSpeechBoxActive}
-                    setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
+                <Sprite
                     isSpriteInSpeechBox={isSpriteInSpeechBox}
-                    messages={speechBoxData}
-                    setPage={setPage}
-                    isNav={isNav}
+                    spriteClicked={spriteClicked}
+                    spriteClickHandler={spriteClickHandler}
+                    isInitialSpriteClick={isInitialSpriteClick}
+                    isSpriteNavButton={isSpriteNavButton}
                 />
-            }
+
+                {isSpeechBoxActive &&
+                    <SpeechBox
+                        isSpeechBoxActive={isSpeechBoxActive}
+                        setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
+                        isSpriteInSpeechBox={isSpriteInSpeechBox}
+                        messages={speechBoxData}
+                        setIsNav={setIsNav}
+                        isNav={isNav}
+                    />
+                }
+
+                <Switch>
+                    <Route exact path="/">
+                        <Jumbotron text="HOWDY" color="#CEFF00" />
+                    </Route>
+                    <Route path="/work">
+                        <WorkPage />
+                    </Route>
+                    <Route path="/about">
+                        <AboutPage />
+                    </Route>
+                    <Route path="/contact">
+                        <ContactPage />
+                    </Route>
+                </Switch>
+            </Router>
         </>
     );
 }
