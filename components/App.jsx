@@ -1,5 +1,5 @@
 // the worms control the spice 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import AudioButton from './AudioButton';
 import Jumbotron from "./Jumbotron";
@@ -9,7 +9,7 @@ import MainNav from "./MainNav";
 import AboutPage from './pages/AboutPage';
 import WorkPage from "./pages/WorkPage";
 import ContactPage from "./pages/ContactPage";
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
+import { Switch, BrowserRouter as Router, Route, useLocation } from 'react-router-dom'
 
 //SPRITE SHIFTING FUNC
 //TODO: connect dialogue change to speechbox
@@ -22,23 +22,25 @@ const App = () => {
 
     const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
     const [speechBoxData, isSpeechBoxData] = useState(dialogueObj.intro)
+
+    let location = useLocation();
     
     // I think this wants to be refactored to some other name
     const [isNav, setIsNav] = useState(false);
 
     // does this do way too much?
     const spriteClickHandler = () => {
-        if (isInitialSpriteClick) {
+        if(location.pathname === "/" && isInitialSpriteClick){
             setSpriteClicked(true);
             // useEffect for animation change here too
             setTimeout(() => {
                 setIsSpeechBoxActive(true);
             }, 500);
             setIsInitialSpriteClick(false);
-        } else {
-            setIsNav(true);
         }
-
+        else {
+            setIsNav(!isNav);
+        }
     }
 
     return (
@@ -55,6 +57,7 @@ const App = () => {
                     spriteClickHandler={spriteClickHandler}
                     isInitialSpriteClick={isInitialSpriteClick}
                     isSpriteNavButton={isSpriteNavButton}
+                    location={location}
                 />
 
                 {isSpeechBoxActive &&

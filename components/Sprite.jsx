@@ -3,7 +3,14 @@ import styled from 'styled-components';
 import gsap from "gsap";
 
 
-const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInitialSpriteClick, isSpriteNavButton}) => {
+const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInitialSpriteClick, isSpriteNavButton, location}) => {
+    let leftPos = "50%";
+    let topPos = "50%";
+    if(location.pathname !== "/"){
+        leftPos = "90%";
+        topPos = "10rem";
+    }
+
     if(spriteClicked){
         if(window.innerWidth > 767){
             gsap.to(".sprite-wrapper", {duration: .5, scale: 2, translateY: -100, transformOrigin: 'center'});
@@ -22,7 +29,6 @@ const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInit
         }
     }
 
-    //if we start on not home, sprite is in top left corner 
     //if we start on not home, initial click is false already
     //improve page transitions
     //improve look of about page
@@ -31,7 +37,7 @@ const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInit
 
     return( 
         <>
-            <SpriteWrapper className="sprite-wrapper" onClick={() => spriteClickHandler()}>
+            <SpriteWrapper style={{top: topPos, left: leftPos}} className="sprite-wrapper" onClick={() => spriteClickHandler()}>
                 <SpriteImg src="./../img/sprite.png" />
             </SpriteWrapper>
         </>
@@ -44,8 +50,6 @@ const SpriteWrapper = styled.div `
     position: fixed;
     width: 15rem;
     height: 15rem;
-    left: 50%;
-    top: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
 `;
