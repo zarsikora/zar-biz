@@ -49,7 +49,7 @@ const App = () => {
                 <GlobalStyle />
                 <AudioButton />
 
-                {isNav && <MainNav setIsNav={setIsNav} setIsSpeechBoxActive={setIsSpeechBoxActive} />}
+                {isNav && <MainNav setIsNav={setIsNav} isNav={isNav} setIsSpeechBoxActive={setIsSpeechBoxActive} />}
 
                 <Sprite
                     isSpriteInSpeechBox={isSpriteInSpeechBox}

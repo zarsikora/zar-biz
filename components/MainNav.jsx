@@ -1,11 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useSpring, animated } from 'react-spring'
 import {
     BrowserRouter as Router,
     Link
 } from 'react-router-dom';
 
-const MainNav = ({ setIsNav, setIsSpeechBoxActive }) => {
+const MainNav = ({ setIsNav, isNav, setIsSpeechBoxActive }) => {
+    const animationProps = useSpring({ 
+        to: { scaleY: 1 }, 
+        from: { scaleY: 0 },
+    })
+
+    const AnimatedNavPane = animated(NavPane)
+
+    if(isNav){
+        console.log('nav is active!');
+    }
 
     const removeNavAndSpeechBox = () => {
         //animation 
@@ -14,7 +25,7 @@ const MainNav = ({ setIsNav, setIsSpeechBoxActive }) => {
     }
 
     return (
-        <NavPane>
+        <AnimatedNavPane style={animationProps}>
             <Nav>
                 <NavItem onClick={() => removeNavAndSpeechBox()}>
                     <Link to="/work">
@@ -32,7 +43,7 @@ const MainNav = ({ setIsNav, setIsSpeechBoxActive }) => {
                     </Link>
                 </NavItem>
             </Nav>
-        </NavPane>
+        </AnimatedNavPane>
     );
 }
 
@@ -47,6 +58,7 @@ const NavPane = styled.div`
     background: pink;
     display: block;
     z-index: 997;
+    transform-origin: 50% 0%;
 `
 
 const Nav = styled.ul`

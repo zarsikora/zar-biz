@@ -30,9 +30,10 @@ const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInit
     }
 
     //improve page transitions
+    //switch from gsap to react spring
     //improve look of about page
     //finish adding content to contact page
-    // responsivity
+    //responsivity
 
     return( 
         <>

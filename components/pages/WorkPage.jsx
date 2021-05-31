@@ -4,8 +4,6 @@ import gsap from "gsap";
 
 //TODO: Add DF
 const WorkPage = () => {
-    gsap.to(".work-pane", { duration: .7, scaleY: 1, transformOrigin: 'bottom' });
-
     return (
         <Pane className="test">
             <Header>Web Work</Header>
@@ -20,7 +18,6 @@ const WorkPage = () => {
                         </WorkBlock>
                     )
                 })}
-                {/* Add DF */}
             </WorkList>
         </Pane>
     );
@@ -36,7 +33,6 @@ const Pane = styled.div`
     overflow-y: scroll;
     background-color: #f9f9f9;
     box-sizing: border-box;
-    // transform: scaleY(0);
 `
 
 const Header = styled.h1`
