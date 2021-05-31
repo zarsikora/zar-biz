@@ -29,7 +29,6 @@ const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInit
         }
     }
 
-    //if we start on not home, initial click is false already
     //improve page transitions
     //improve look of about page
     //finish adding content to contact page
