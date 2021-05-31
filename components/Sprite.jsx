@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import gsap from "gsap";
 
 
-const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, active}) => {
-    if(active){
+const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInitialSpriteClick, isSpriteNavButton}) => {
+    if(spriteClicked){
         if(window.innerWidth > 767){
             gsap.to(".sprite-wrapper", {duration: .5, scale: 2, translateY: -100, transformOrigin: 'center'});
         } else {
@@ -21,6 +21,13 @@ const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, active}) => {
             gsap.to(".sprite-wrapper", {duration: .5, scale: 1, translateY: 30, translateX: 0});
         }
     }
+
+    //if we start on not home, sprite is in top left corner 
+    //if we start on not home, initial click is false already
+    //improve page transitions
+    //improve look of about page
+    //finish adding content to contact page
+    // responsivity
 
     return( 
         <>

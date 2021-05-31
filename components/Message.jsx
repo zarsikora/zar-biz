@@ -15,7 +15,7 @@ const Message = ({ isFirstMessage, setIsFirstMessage, message }) => {
                         setTimeout(() => {
                             typewriter.typeString(message)
                                 .start();
-                        }, 900)
+                        }, 300)
                         setIsFirstMessage(false);
                     } else {
                         typewriter.typeString(message)

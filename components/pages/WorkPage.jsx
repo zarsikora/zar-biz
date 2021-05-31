@@ -8,7 +8,7 @@ const WorkPage = () => {
 
     return (
         <Pane className="test">
-            <Header>Work</Header>
+            <Header>Web Work</Header>
             <WorkList>
                 {workData.map((work) => {
                     return (

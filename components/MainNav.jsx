@@ -2,28 +2,52 @@ import React from 'react';
 import styled from 'styled-components';
 import {
     BrowserRouter as Router,
-    Switch,
-    Route,
     Link
 } from 'react-router-dom';
 
-const MainNav = ({ setPage }) => {
+const MainNav = ({ setIsNav, setIsSpeechBoxActive }) => {
+
+    const removeNavAndSpeechBox = () => {
+        //animation 
+        setIsNav(false);
+        setIsSpeechBoxActive(false);
+    }
+
     return (
-        <Nav>
-            <li onClick={() => { setPage('work') }}>
-                View My Work
-                    </li>
-            <li onClick={() => { setPage('about') }}>
-                Hear About Me
-                    </li>
-            <li onClick={() => { setPage('contact') }}>
-                Contact Me
-                    </li>
-        </Nav>
+        <NavPane>
+            <Nav>
+                <NavItem onClick={() => removeNavAndSpeechBox()}>
+                    <Link to="/work">
+                        View My Work
+                    </Link>
+                </NavItem>
+                <NavItem onClick={() => removeNavAndSpeechBox()}>
+                    <Link to="/about">
+                        Hear About Me
+                    </Link>
+                </NavItem>
+                <NavItem onClick={() => removeNavAndSpeechBox()}>
+                    <Link to="/contact">
+                        Contact Me
+                    </Link>
+                </NavItem>
+            </Nav>
+        </NavPane>
     );
 }
 
 export default MainNav;
+
+const NavPane = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: pink;
+    display: block;
+    z-index: 997;
+`
 
 const Nav = styled.ul`
     margin: 0;
@@ -47,13 +71,22 @@ const Nav = styled.ul`
     @media(min-width: 1440){
         font-size: 8vw;
     }
+`
 
-    li {
-        cursor: pointer;
+const NavItem = styled.li `
+    cursor: pointer;
+    transition: all ease 300ms;
+
+    &:hover {
+        color: black;
+    }
+
+    a {
+        color: red;
         transition: all ease 300ms;
 
         &:hover {
-            color: black;
+            color: #000;
         }
     }
 `
