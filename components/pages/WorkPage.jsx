@@ -5,7 +5,7 @@ import gsap from "gsap";
 //TODO: Add DF
 const WorkPage = () => {
     return (
-        <Pane className="test">
+        <Pane>
             <Header>Web Work</Header>
             <WorkList>
                 {workData.map((work) => {
@@ -39,7 +39,6 @@ const Header = styled.h1`
     text-align: center;
     color: #000;
     font-size: 7vw;
-    // opacity: 0;
 `
 
 const WorkList = styled.ul`
@@ -47,7 +46,6 @@ const WorkList = styled.ul`
     padding: 0;
     text-align: center;
     font-size: 5vw;
-    // opacity: 0;
 
     li, a {
         color: #000;
@@ -58,11 +56,14 @@ const WorkList = styled.ul`
 
 const WorkBlock = styled.li`
     background-color: ${props => props.bg};
-    width: 50%;
+    width: 100%;
     margin: 2rem auto;
     position: relative;
     transition: all ease 300ms;
     // opacity: 0;
+    @media(min-width: 992px){
+        width: 50%;
+    }
 
     &:hover {
         img {
