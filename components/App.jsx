@@ -9,7 +9,8 @@ import MainNav from "./MainNav";
 import AboutPage from './pages/AboutPage';
 import WorkPage from "./pages/WorkPage";
 import ContactPage from "./pages/ContactPage";
-import { Switch, BrowserRouter as Router, Route, useLocation } from 'react-router-dom'
+import { Switch, BrowserRouter as Router, Route, useLocation } from 'react-router-dom';
+import { useTransition, animated } from 'react-spring';
 
 //SPRITE SHIFTING FUNC
 //TODO: connect dialogue change to speechbox
@@ -19,29 +20,26 @@ const App = () => {
     const [isInitialSpriteClick, setIsInitialSpriteClick] = useState(true);
     const [isSpriteInSpeechBox, setIsSpriteInSpeechBox] = useState(false);
     const [isSpriteNavButton, setIsSpriteNavButton] = useState(false);
-
+    const [ dummy, setDummy ] = useState(false);
+    const [isNav, setIsNav] = useState(false);
     const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
     const [speechBoxData, isSpeechBoxData] = useState(dialogueObj.intro)
-
+    console.log(isNav)
     let location = useLocation();
     
     // I think this wants to be refactored to some other name
-    const [isNav, setIsNav] = useState(false);
 
     // does this do way too much?
-    const spriteClickHandler = () => {
-        if(location.pathname === "/" && isInitialSpriteClick){
-            setSpriteClicked(true);
-            // useEffect for animation change here too
-            setTimeout(() => {
-                setIsSpeechBoxActive(true);
-            }, 500);
-            setIsInitialSpriteClick(false);
-        }
-        else {
-            setIsNav(!isNav);
-        }
-    }
+
+    // NAV ANIMATION - hook vars up to what app is doing because code explains what it is doing
+    const toggleNavView = useTransition(dummy, {
+        from: { opacity: 0 },
+        enter: { opacity: 1 },
+        leave: { opacity: 0 },
+        // reverse: dummy,
+        delay: 200,
+        // onRest: () => setDummy(!dummy),
+      })
 
     return (
         <>
@@ -49,15 +47,24 @@ const App = () => {
                 <GlobalStyle />
                 <AudioButton />
 
-                {isNav && <MainNav setIsNav={setIsNav} isNav={isNav} setIsSpeechBoxActive={setIsSpeechBoxActive} />}
+                {toggleNavView((transformY, item) => {
+                    console.log(transformY);
+                    return item && <AnimatedMainNav style={transformY} />
+                })}
 
                 <Sprite
                     isSpriteInSpeechBox={isSpriteInSpeechBox}
                     spriteClicked={spriteClicked}
-                    spriteClickHandler={spriteClickHandler}
                     isInitialSpriteClick={isInitialSpriteClick}
                     isSpriteNavButton={isSpriteNavButton}
                     location={location}
+                    setIsNav={setIsNav}
+                    setSpriteClicked={setSpriteClicked}
+                    setIsSpeechBoxActive={setIsSpeechBoxActive}
+                    setIsInitialSpriteClick={setIsInitialSpriteClick}
+                    setDummy={setDummy}
+                    dummy={dummy}
+                    isNav={isNav}
                 />
 
                 {isSpeechBoxActive &&
@@ -122,6 +129,9 @@ const dialogueObj = {
         ]
     }
 }
+
+const AnimatedMainNav = animated(MainNav);
+
 
 const GlobalStyle = createGlobalStyle`
 @font-face {

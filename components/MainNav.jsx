@@ -1,31 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useSpring, animated } from 'react-spring'
 import {
     BrowserRouter as Router,
     Link
 } from 'react-router-dom';
 
-const MainNav = ({ setIsNav, isNav, setIsSpeechBoxActive }) => {
-    const animationProps = useSpring({ 
-        to: { scaleY: 1 }, 
-        from: { scaleY: 0 },
-    })
+const MainNav = ({ setIsNav, setIsSpeechBoxActive }) => {
+    console.log('I am getting rendered')
 
-    const AnimatedNavPane = animated(NavPane)
-
-    if(isNav){
-        console.log('nav is active!');
-    }
-
-    const removeNavAndSpeechBox = () => {
-        //animation 
-        setIsNav(false);
-        setIsSpeechBoxActive(false);
-    }
+    // TODO: move this up a level and remove set is nav and is nav from this component
+    // const removeNavAndSpeechBox = () => {
+    //     //animation 
+    //     setIsNav(false);
+    //     setIsSpeechBoxActive(false);
+    // }
 
     return (
-        <AnimatedNavPane style={animationProps}>
+        <NavPane>
             <Nav>
                 <NavItem onClick={() => removeNavAndSpeechBox()}>
                     <Link to="/work">
@@ -43,7 +34,7 @@ const MainNav = ({ setIsNav, isNav, setIsSpeechBoxActive }) => {
                     </Link>
                 </NavItem>
             </Nav>
-        </AnimatedNavPane>
+        </NavPane>
     );
 }
 

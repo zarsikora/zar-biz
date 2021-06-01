@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import gsap from "gsap";
 
 
-const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInitialSpriteClick, isSpriteNavButton, location}) => {
+const Sprite = ({setIsNav, isNav, dummy, setDummy, isSpriteInSpeechBox, spriteClicked, isInitialSpriteClick, setSpriteClicked, location, setIsSpeechBoxActive, setIsInitialSpriteClick}) => {
     let leftPos = "50%";
     let topPos = "50%";
-    if(location.pathname !== "/"){
-        leftPos = "90%";
-        topPos = "10rem";
-    }
-
+    // if(location.pathname !== "/"){
+    //     leftPos = "90%";
+    //     topPos = "10rem";
+    // }
+    console.log('Sprite is getting rendered')
     if(spriteClicked){
         if(window.innerWidth > 767){
             gsap.to(".sprite-wrapper", {duration: .5, scale: 2, translateY: -100, transformOrigin: 'center'});
@@ -29,6 +29,22 @@ const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInit
         }
     }
 
+    const spriteClickHandler = () => {
+        setDummy(!dummy);
+        if(/*location.pathname === "/" && */isInitialSpriteClick) {
+            console.log('I am the if')
+            setSpriteClicked(true);
+            // useEffect for animation change here too
+            // setTimeout(() => {
+            //     setIsSpeechBoxActive(true);
+            // }, 500);
+            setIsInitialSpriteClick(false);
+        }
+        else {
+            console.log('I am getting called the else')
+            setIsNav(!isNav);
+        }
+    }
     //improve page transitions
     //switch from gsap to react spring
     //improve look of about page

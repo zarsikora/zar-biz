@@ -4,6 +4,7 @@ import gsap from "gsap";
 
 //TODO: Add DF
 const WorkPage = () => {
+    console.log('Work is getting rendered how many times?')
     return (
         <Pane>
             <Header>Web Work</Header>

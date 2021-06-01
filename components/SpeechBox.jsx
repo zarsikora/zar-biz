@@ -4,27 +4,29 @@ import gsap from "gsap";
 import Message from "./Message";
 import rightArrow from "./../img/icon/arrow-right.png";
 
-const SpeechBox = ({ isSpeechBoxActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, messages, isNav, setPage, setIsNav }) => {
+const SpeechBox = ({ isActive, setIsSpriteInSpeechBox, isSpriteInSpeechBox, messages, isNav, setPage }) => {
     const [currentMessage, setCurrentMessage] = useState(0);
     const [isFirstMessage, setIsFirstMessage] = useState(true);
     const [ arrowActive, setArrowActive ] = useState(true);
+
+
 
     // lines might have a better state representation
     let lines = messages.lines;
     let hasNav = messages.navigation;
 
-    if (isSpeechBoxActive) {
+    console.log(messages);
+
+    if (isActive) {
         gsap.to(".speech-box", { duration: .3, opacity: .8 });
-    } else {
-        gsap.to(".speech-box", { duration: .3, opacity: 0});
     }
-    
     // This def needs to be refactored into separate functions
     const handleClick = () => {
         if (currentMessage < lines.length - 1) {
             setCurrentMessage(currentMessage + 1);
+        // this says if there are no more messages and a nav exists
         } else if (hasNav) {
-            setIsNav(true);
+            setPage('nav');
             setArrowActive(false);
             setIsSpriteInSpeechBox(true);
         }
@@ -64,7 +66,6 @@ const Box = styled.div`
     font-size: 2.5rem;
     padding: 5rem;
     box-sizing: border-box;
-    z-index: 998;
     @media(min-width: 768px){
         font-size: 3.5rem;
         width: 90%;
