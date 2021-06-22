@@ -1,38 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import gsap from "gsap";
 
-
-const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInitialSpriteClick, isSpriteNavButton}) => {
-    if(spriteClicked){
-        if(window.innerWidth > 767){
-            gsap.to(".sprite-wrapper", {duration: .5, scale: 2, translateY: -100, transformOrigin: 'center'});
-        } else {
-            gsap.to(".sprite-wrapper", {duration: .5, scale: 1.5, translateY: -200, transformOrigin: 'center'});
-        }
-    }
-
-    if(isSpriteInSpeechBox){
-        if(window.innerWidth > 991){
-            gsap.to(".sprite-wrapper", {duration: .5, scale: 1, translateY: 210, translateX: -450, transformOrigin: 'center'});
-        } else if(window.innerWidth > 767) {
-            gsap.to(".sprite-wrapper", {duration: .5, scale: 1, translateY: 350, translateX: -250});
-        } else {
-            gsap.to(".sprite-wrapper", {duration: .5, scale: 1, translateY: 30, translateX: 0});
-        }
-    }
-
-    //if we start on not home, sprite is in top left corner 
-    //if we start on not home, initial click is false already
-    //improve page transitions
-    //improve look of about page
-    //finish adding content to contact page
-    // responsivity
+const Sprite = ({ handleMainNavRender }) => {
+    let rightPos = "2rem";
+    let topPos = "2rem";
 
     return( 
         <>
-            <SpriteWrapper className="sprite-wrapper" onClick={() => spriteClickHandler()}>
+            <SpriteWrapper style={{top: topPos, right: rightPos}} className="sprite-wrapper" onClick={ () => handleMainNavRender()} >
                 <SpriteImg src="./../img/sprite.png" />
+                <SpeechBubble src="./../img/click-me.png" />
             </SpriteWrapper>
         </>
     );
@@ -41,14 +18,26 @@ const Sprite = ({ spriteClickHandler, isSpriteInSpeechBox, spriteClicked, isInit
 export default Sprite;
 
 const SpriteWrapper = styled.div `
-    position: fixed;
-    width: 15rem;
-    height: 15rem;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    //position: fixed;
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
     z-index: 999;
+    @media(min-width: 992px){
+        width: 12rem;
+        height: 12rem;
+    }
 `;
+
+const SpeechBubble = styled.img `
+    position: absolute;
+    width: 10rem;
+    left: -7rem;
+    display: none;
+    @media(min-width: 992px){
+        display: block;
+    }
+`
 
 const SpriteImg = styled.img `
     display: block;

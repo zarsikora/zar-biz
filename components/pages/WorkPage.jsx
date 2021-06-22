@@ -1,57 +1,87 @@
 import React from "react";
 import styled from "styled-components";
-import gsap from "gsap";
+import { motion } from "framer-motion";
+//Components
+import Shader from "./../Shader";
+import FreshSites from "./../../img/fresh-sites.png"
 
-//TODO: Add DF
+const container = {
+    hidden: { opacity: 0 },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: .15
+        }
+    }
+}
+
+const listItem = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+}
+
 const WorkPage = () => {
-    gsap.to(".work-pane", { duration: .7, scaleY: 1, transformOrigin: 'bottom' });
-
     return (
-        <Pane className="test">
-            <Header>Web Work</Header>
-            <WorkList>
-                {workData.map((work) => {
-                    return (
-                        <WorkBlock key={work.name} bg={work.bg} text={work.text}>
-                            <a target="_BLANK" href={work.link} >
-                                <span>{work.name}</span>
-                                <img src={work.img} />
-                            </a>
-                        </WorkBlock>
-                    )
-                })}
-                {/* Add DF */}
-            </WorkList>
-        </Pane>
+        <>
+            <Wrapper>
+                <Shader img={FreshSites} opacity=".5" />
+
+                <Pane initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                    <Header inital={{ opacity: 0 }} animate={{ opacity: 1 }}>Work</Header>
+                    <WorkList variants={container} initial="hidden" animate="show">
+                        {workData.map((work) => {
+                            return (
+                                <WorkBlock variants={listItem} key={work.name} bg={work.bg} text={work.text}>
+                                    <a target="_BLANK" href={work.link} >
+                                        <span>{work.name}</span>
+                                        <img src={work.img} />
+                                    </a>
+                                </WorkBlock>
+                            )
+                        })}
+                    </WorkList>
+                </Pane>
+            </Wrapper>
+        </>
     );
 }
 
 export default WorkPage;
 
-const Pane = styled.div`
+const Wrapper = styled.div`
+    background-color: #fff;
+`
+
+const Pane = styled(motion.div)`
     padding: 5rem;
     width: 100%;
     height: 100vh;
     display: block;
     overflow-y: scroll;
-    background-color: #f9f9f9;
+    background-color: none;
     box-sizing: border-box;
-    // transform: scaleY(0);
+    position: relative;
+    z-index: 2;
 `
 
-const Header = styled.h1`
+const Header = styled(motion.h1)`
     text-align: center;
     color: #000;
-    font-size: 7vw;
-    // opacity: 0;
+    font-size: 7rem;
+    @media(min-width: 992px){
+        font-size: 7vw;
+    }
+
 `
 
-const WorkList = styled.ul`
+const WorkList = styled(motion.ul)`
     list-style: none;
     padding: 0;
     text-align: center;
-    font-size: 5vw;
-    // opacity: 0;
+    font-size: 5rem;
+    @media(min-width: 992px){
+        font-size: 5vw;
+    }
 
     li, a {
         color: #000;
@@ -60,13 +90,16 @@ const WorkList = styled.ul`
     }
 `
 
-const WorkBlock = styled.li`
+const WorkBlock = styled(motion.li)`
     background-color: ${props => props.bg};
-    width: 50%;
+    width: 100%;
     margin: 2rem auto;
     position: relative;
     transition: all ease 300ms;
     // opacity: 0;
+    @media(min-width: 992px){
+        width: 50%;
+    }
 
     &:hover {
         img {
@@ -113,8 +146,15 @@ const workData = [
         name: "Steel Root",
         link: "https://steelroot.us/",
         bg: "#181d40",
-        text: "#db5150",
+        text: "#01adcb",
         img: "./../../img/work/sr-peek.png"
+    },
+    {
+        name: "DriveForce",
+        link: "https://driveforce.golf",
+        bg: "#919A6B",
+        text: "#081D1A",
+        img: "./../../img/work/df-peek.png"
     },
     {
         name: "TransHealth",
@@ -124,7 +164,7 @@ const workData = [
         img: "./../../img/work/th-peek.png"
     },
     {
-        name: "ThinkForward Financial",
+        name: "ThinkForward",
         link: "https://thinkforwardfinancial.com/home/",
         bg: "#e16e37",
         text: "#fff",

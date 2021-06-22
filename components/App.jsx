@@ -1,88 +1,68 @@
 // the worms control the spice 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { AnimatePresence } from "framer-motion";
 import { createGlobalStyle } from 'styled-components';
-import AudioButton from './AudioButton';
-import Jumbotron from "./Jumbotron";
-import Sprite from './Sprite';
-import SpeechBox from "./SpeechBox";
-import MainNav from "./MainNav";
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import WebfontLoader from '@dr-kobros/react-webfont-loader';
+//Pages
+import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WorkPage from "./pages/WorkPage";
 import ContactPage from "./pages/ContactPage";
-import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
+//Components
+import AudioButton from './AudioButton';
+import Sprite from './Sprite';
+import MainNav from "./MainNav";
 
-//SPRITE SHIFTING FUNC
-//TODO: connect dialogue change to speechbox
+
 const App = () => {
-    // change name to initial click later
-    const [spriteClicked, setSpriteClicked] = useState(false);
-    const [isInitialSpriteClick, setIsInitialSpriteClick] = useState(true);
-    const [isSpriteInSpeechBox, setIsSpriteInSpeechBox] = useState(false);
-    const [isSpriteNavButton, setIsSpriteNavButton] = useState(false);
+    const [speechBoxDialogue, setSpeechBoxDialogue] = useState(dialogueObj.intro);
+    const [isNavActive, setIsNavActive] = useState(false);
 
-    const [isSpeechBoxActive, setIsSpeechBoxActive] = useState(false);
-    const [speechBoxData, isSpeechBoxData] = useState(dialogueObj.intro)
-    
-    // I think this wants to be refactored to some other name
-    const [isNav, setIsNav] = useState(false);
+    const handleMainNavRender = () => {
+        setIsNavActive(!isNavActive);
+    }
 
-    // does this do way too much?
-    const spriteClickHandler = () => {
-        if (isInitialSpriteClick) {
-            setSpriteClicked(true);
-            // useEffect for animation change here too
-            setTimeout(() => {
-                setIsSpeechBoxActive(true);
-            }, 500);
-            setIsInitialSpriteClick(false);
-        } else {
-            setIsNav(true);
+    const webFontConfig = {
+        custom: {
+            families: ['Detechno', 'Roboto']
         }
-
     }
 
     return (
         <>
-            <Router>
-                <GlobalStyle />
-                <AudioButton />
+            <WebfontLoader config={webFontConfig}>
+                <Router>
+                    <GlobalStyle />
+                    <AudioButton />
 
-                {isNav && <MainNav setIsNav={setIsNav} setIsSpeechBoxActive={setIsSpeechBoxActive} />}
+                    <Sprite handleMainNavRender={handleMainNavRender} />
 
-                <Sprite
-                    isSpriteInSpeechBox={isSpriteInSpeechBox}
-                    spriteClicked={spriteClicked}
-                    spriteClickHandler={spriteClickHandler}
-                    isInitialSpriteClick={isInitialSpriteClick}
-                    isSpriteNavButton={isSpriteNavButton}
-                />
+                    <AnimatePresence>
+                        {isNavActive && <MainNav handleMainNavRender={handleMainNavRender} />}
+                    </AnimatePresence>
+                    
+                    {/* if route is whereto do this */}
+                    {/* <SpeechBox messages={speechBoxDialogue} /> */}
 
-                {isSpeechBoxActive &&
-                    <SpeechBox
-                        isSpeechBoxActive={isSpeechBoxActive}
-                        setIsSpriteInSpeechBox={setIsSpriteInSpeechBox}
-                        isSpriteInSpeechBox={isSpriteInSpeechBox}
-                        messages={speechBoxData}
-                        setIsNav={setIsNav}
-                        isNav={isNav}
-                    />
-                }
-
-                <Switch>
-                    <Route exact path="/">
-                        <Jumbotron text="HOWDY" color="#CEFF00" />
-                    </Route>
-                    <Route path="/work">
-                        <WorkPage />
-                    </Route>
-                    <Route path="/about">
-                        <AboutPage />
-                    </Route>
-                    <Route path="/contact">
-                        <ContactPage />
-                    </Route>
-                </Switch>
-            </Router>
+                    <AnimatePresence initial={false} exitBeforeEnter>
+                        <Switch>
+                            <Route exact path="/">
+                                <HomePage />
+                            </Route>
+                            <Route path="/work">
+                                <WorkPage />
+                            </Route>
+                            <Route path="/about">
+                                <AboutPage />
+                            </Route>
+                            <Route path="/contact">
+                                <ContactPage />
+                            </Route>
+                        </Switch>
+                    </AnimatePresence>
+                </Router>
+            </WebfontLoader>
         </>
     );
 }
@@ -92,26 +72,10 @@ export default App;
 const dialogueObj = {
     intro: {
         lines: [
-            "Fancy seeing you here! I'm Zar -- Welcome to my little pocket of the digital hellscape.",
+            "Hi, I'm Zar -- Welcome to my little pocket of the digital hellscape.",
             "<span class='small'>Well technically I'm a graphical representation, but you get my meaning...</span>",
             "What can I do ya for?"
         ],
-        navigation: {
-            options: [
-                {
-                    line: "View My Work",
-                    page: "/work"
-                },
-                {
-                    line: "Hear About Me",
-                    page: "/about"
-                },
-                {
-                    line: "Contact Me",
-                    page: "/contact"
-                }
-            ]
-        }
     },
     work: {
         lines: [
@@ -119,6 +83,8 @@ const dialogueObj = {
         ]
     }
 }
+
+
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
@@ -129,6 +95,14 @@ const GlobalStyle = createGlobalStyle`
 @font-face {
     font-family: 'Roboto';
     src: local('Roboto'), url(./../fonts/RobotoMono-VariableFont_wght.ttf) format('truetype');
+}
+
+//Stop font flickering
+.wf-loading body {
+    opacity: 0;
+}
+.wf-active body .wf-inactive body {
+    opacity: 1;
 }
 
 html {
@@ -169,10 +143,34 @@ span.small {
   100% { top: -2px}
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0}
+    100% {opacity: 1}
+}
+
+    @keyframes spin {
+        0% {
+        transform: translateY(0) rotate(0deg);
+        }
+        100% {
+        transform: translateY(-100%) rotate(360deg);
+        }
+    }
+
 @keyframes bounceRight {
     0% {transform: translateX(-2px)}
     50% {transform: translateX(2px)}
     100% { transform: translateX(-2px)}
+  }
+
+  @keyframes dripDown {
+    0% { d: path("M1920.5,27.81s-143.91,5.27-254,39.62-307.44,73.32-668-19.5S.5,27.34.5,27.34V.5H1916.6Z"); }
+    100% { d: path("M1920.5,1555.21s-143.91,70.43-254,529.13-307.44,979.4-668-260.34S.5,1548.89.5,1548.89V.5h1920Z"); }
+  }
+
+  @keyframes dripUp {
+      0% { d: path("M.5,70.13s144-3,254.59-35.53,308.57-68.38,667.6,30.22,997.55,36.63,997.55,36.63l-.43,26.83H.5Z") }
+      100% { d: path("M7.56,1037.66s144.23-69.77,256.37-528,311.88-978,666.83,263.38,996.75,279.63,996.75,279.63l-7,1548.37L.5,2592.35Z") }
   }
 
 @keyframes textWiggle {

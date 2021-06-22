@@ -13,8 +13,11 @@
     "snowpack": "^3.5.1"
   },
   "dependencies": {
+    "@dr-kobros/react-webfont-loader": "^8.0.0",
     "@types/react-transition-group": "^4.4.1",
     "canvas-confetti": "^1.4.0",
+    "framer-motion": "^4.1.17",
+    "glslCanvas": "^0.1.7",
     "gsap": "^3.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
