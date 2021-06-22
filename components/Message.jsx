@@ -28,8 +28,7 @@ const Message = ({ isFirstMessage, setIsFirstMessage, message }) => {
 }
 
 const TypewriterMessage = styled(Typewriter)`
-    font-size: 6rem;
-    
+    font-size: 6rem;  
 `
 
 export default Message;
