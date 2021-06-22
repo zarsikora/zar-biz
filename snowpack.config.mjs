@@ -6,4 +6,12 @@ export default {
         dest: '/index.html',
       },
     ],
+    plugins: [
+      [
+        '@snowpack/plugin-webpack',
+        {
+          /* see "Plugin Options" below */
+        },
+      ],
+    ]
   };
