@@ -1,0 +1,1 @@
+export default "/img/fresh-sites.png";

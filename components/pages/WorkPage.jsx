@@ -26,7 +26,7 @@ const WorkPage = () => {
             <Wrapper>
                 <Shader img={FreshSites} opacity=".5" />
 
-                <Pane initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <Pane>
                     <Header inital={{ opacity: 0 }} animate={{ opacity: 1 }}>Work</Header>
                     <WorkList variants={container} initial="hidden" animate="show">
                         {workData.map((work) => {
@@ -49,7 +49,7 @@ const WorkPage = () => {
 export default WorkPage;
 
 const Wrapper = styled.div`
-    background-color: #fff;
+    background-color: #000
 `
 
 const Pane = styled(motion.div)`
@@ -66,7 +66,7 @@ const Pane = styled(motion.div)`
 
 const Header = styled(motion.h1)`
     text-align: center;
-    color: #000;
+    color: #fff;
     font-size: 7rem;
     @media(min-width: 992px){
         font-size: 7vw;

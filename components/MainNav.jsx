@@ -5,6 +5,7 @@ import {
     BrowserRouter as Router,
     Link
 } from 'react-router-dom';
+import { Component } from 'react';
 
 const transition = {
     duration: 0.6,
@@ -12,9 +13,13 @@ const transition = {
 };
 
 const navPane = {
-    hidden: { opacity: 0 },
+    hidden: { 
+        opacity: 0,
+        background: "none"
+    },
     show: {
         opacity: 1,
+        background: "pink",
         transition: {
             duration: 0.01,
             delay: 0.61
@@ -23,8 +28,7 @@ const navPane = {
     hide: {
         opacity: 0,
         transition: {
-            duration: .5,
-            delay: .3
+            duration: .3,
         }
     }
 }
@@ -51,17 +55,17 @@ const MainNav = ({ handleMainNavRender }) => {
                 <motion.path initial={{ scaleY: 0, originY: 0 }} animate={{ scaleY: 1 }} transition={transition} className="morph" fill="pink"></motion.path>
             </WaveIn>
 
-            <ExitPane variants={exitPane} initial="hidden" exit="leave">
-            </ExitPane>
+            {/* <ExitPane variants={exitPane} initial="hidden" exit="leave">
+            </ExitPane> */}
 
-            <NavPane variants={navPane} initial="hidden" animate="show" exit="hide">
+            <NavPane variants={navPane} initial="hidden" animate="show" >
                 <Nav>
-                    <NavItem onClick={() => handleMainNavRender()} >
+                    <NavItem onClick={() => handleMainNavRender()}>
                         <Link to="/">
                             Home
                         </Link>
                     </NavItem>
-                    <NavItem onClick={() => handleMainNavRender()} >
+                    <NavItem onClick={() => handleMainNavRender()}>
                         <Link to="/work">
                             Work
                         </Link>
