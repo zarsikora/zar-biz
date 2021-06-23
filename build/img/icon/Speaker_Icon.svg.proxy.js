@@ -1,1 +1,0 @@
-export default "/img/icon/Speaker_Icon.svg";

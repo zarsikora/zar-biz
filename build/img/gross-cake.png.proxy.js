@@ -1,1 +1,0 @@
-export default "/img/gross-cake.png";
