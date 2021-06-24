@@ -117,7 +117,6 @@ body {
     background-color: #141515;
     color: #fff;
     position: relative;
-    overflow: hidden;
 }
 
 h1 {

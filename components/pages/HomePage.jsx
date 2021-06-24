@@ -12,17 +12,19 @@ import Hamburglar from './../../img/hamburglar.jpg';
 
 const HomePage = () => {
     return (
-        <Wrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <div>
-                <Jumbotron text="HOWDY, I'M ZAR" color="#fff" opacity="1" />
-                <ShaderImage img={Hamburglar} />
-                <SubHeader>I'm a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics.</SubHeader>
+        <>
+            <Wrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <div>
+                    <Jumbotron text="HOWDY" color="#fff" opacity="1" />
+                    <ShaderImage img={Hamburglar} />
+                    <SubHeader>I'm Zar, a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics.</SubHeader>
 
-                <CallToAction>
-                    <Link to="/work">View my work. <span>&#128121;</span> </Link>
-                </CallToAction>
-            </div>
-        </Wrapper>
+                    <CallToAction>
+                        <Link to="/work">View my work. <span>&#128121;</span> </Link>
+                    </CallToAction>
+                </div>
+            </Wrapper>
+        </>
     );
 }
 
@@ -32,8 +34,10 @@ const Wrapper = styled(motion.div)`
     min-height: 100vh;
     padding: 0 2rem;
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    position: relative;
     @media(min-width: 768px){
         padding: 0;
     }

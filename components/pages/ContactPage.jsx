@@ -72,7 +72,7 @@ const ContactBlock = styled.li`
     span {
         transition: all ease 300ms;
         background: none;
-        padding: 1rem;
+        padding: 1rem .5rem;
 
         &:hover {
             background: #000;
@@ -93,7 +93,7 @@ const ContactBlock = styled.li`
         padding: 1rem;
 
         &:after {
-            content: ", ";
+            content: ",";
             color: #fff;
             transition: all ease 300ms;
         }

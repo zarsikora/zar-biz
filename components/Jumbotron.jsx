@@ -14,10 +14,8 @@ const Header = styled.h1`
     z-index: 2;
     display: block;
     text-align: center;
-    margin-top: 8rem;
     @media(min-width: 768px){
         font-size: 10rem;
-        margin-top: 0;
     }
     @media(min-width: 992px){
         margin: 0;
