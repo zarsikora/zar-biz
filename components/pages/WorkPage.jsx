@@ -98,17 +98,17 @@ const WorkBlock = styled(motion.li)`
     transition: all ease 300ms;
     @media(min-width: 992px){
         width: 50%;
-    }
 
-    &:hover {
-        img {
-            opacity: 1;
-        }
+        &:hover {
+            img {
+                opacity: 1;
+            }
 
-        a span {
-            color: #fff;
-            position: relative;
-            z-index: 88;
+            a span {
+                color: #fff;
+                position: relative;
+                z-index: 88; 
+            }
         }
     }
 
