@@ -2,7 +2,7 @@ import React from "../../_snowpack/pkg/react.js";
 import styled from "../../_snowpack/pkg/styled-components.js";
 import {motion} from "../../_snowpack/pkg/framer-motion.js";
 import Shader from "../Shader.js";
-import FreshSites from "../../img/fresh-sites.png.proxy.js";
+import FreshSites from "../../img/fresh-sites-min.png.proxy.js";
 const container = {
   hidden: {opacity: 0},
   show: {

@@ -9,26 +9,28 @@ import Jumbotron from "../Jumbotron.js";
 import ShaderImage from "../ShaderImage.js";
 import Hamburglar from "../../img/hamburglar.jpg.proxy.js";
 const HomePage = () => {
-  return /* @__PURE__ */ React.createElement(Wrapper, {
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Wrapper, {
     initial: {opacity: 0},
     animate: {opacity: 1}
   }, /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement(Jumbotron, {
-    text: "HOWDY, I'M ZAR",
+    text: "HOWDY",
     color: "#fff",
     opacity: "1"
   }), /* @__PURE__ */ React.createElement(ShaderImage, {
     img: Hamburglar
-  }), /* @__PURE__ */ React.createElement(SubHeader, null, "I'm a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics."), /* @__PURE__ */ React.createElement(CallToAction, null, /* @__PURE__ */ React.createElement(Link, {
+  }), /* @__PURE__ */ React.createElement(SubHeader, null, "I'm Zar, a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics."), /* @__PURE__ */ React.createElement(CallToAction, null, /* @__PURE__ */ React.createElement(Link, {
     to: "/work"
-  }, "View my work. ", /* @__PURE__ */ React.createElement("span", null, "👹"), " "))));
+  }, "View my work. ", /* @__PURE__ */ React.createElement("span", null, "👹"), " ")))));
 };
 export default HomePage;
 const Wrapper = styled(motion.div)`
     min-height: 100vh;
     padding: 0 2rem;
     display: flex;
+    box-sizing: border-box;
     justify-content: center;
     align-items: center;
+    position: relative;
     @media(min-width: 768px){
         padding: 0;
     }

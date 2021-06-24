@@ -1,0 +1,1 @@
+export default "/img/gross-cake-min.png";

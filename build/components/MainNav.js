@@ -53,7 +53,12 @@ const MainNav = ({handleMainNavRender}) => {
     transition,
     className: "morph",
     fill: "pink"
-  })), /* @__PURE__ */ React.createElement(NavPane, {
+  }, /* @__PURE__ */ React.createElement("animate", {
+    attributeName: "d",
+    values: "\n                        M1920.5,27.81s-143.91,5.27-254,39.62-307.44,73.32-668-19.5S.5,27.34.5,27.34V.5H1916.6Z\n                        M1920.5,1555.21s-143.91,70.43-254,529.13-307.44,979.4-668-260.34S.5,1548.89.5,1548.89V.5h1920Z",
+    dur: "700ms",
+    repeatCount: "0"
+  }))), /* @__PURE__ */ React.createElement(NavPane, {
     variants: navPane,
     initial: "hidden",
     animate: "show"
@@ -91,15 +96,6 @@ const WaveIn = styled.svg`
         animation: dripDown 700ms;
         animation-timing-function: ease-in;
     }
-`;
-const ExitPane = styled(motion.div)`
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    background: #000;
-    bottom: 0;
-    right: 0;
-    z-index: 999;
 `;
 const NavPane = styled(motion.div)`
     position: absolute;

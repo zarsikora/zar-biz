@@ -1,0 +1,1 @@
+export default "/img/me-min.png";

@@ -2,7 +2,7 @@ import React from "../../_snowpack/pkg/react.js";
 import styled from "../../_snowpack/pkg/styled-components.js";
 import {motion} from "../../_snowpack/pkg/framer-motion.js";
 import Shader from "../Shader.js";
-import GrossCake from "../../img/gross-cake.png.proxy.js";
+import GrossCake from "../../img/gross-cake-min.png.proxy.js";
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 const WorkPage = () => {
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Wrapper, {
@@ -17,10 +17,10 @@ const WorkPage = () => {
   }, /* @__PURE__ */ React.createElement(ContactList, null, contactData.map((contact) => {
     return /* @__PURE__ */ React.createElement(ContactBlock, {
       key: contact.name
-    }, /* @__PURE__ */ React.createElement("a", {
+    }, /* @__PURE__ */ React.createElement("span", null, /* @__PURE__ */ React.createElement("a", {
       target: "_BLANK",
       href: contact.link
-    }, /* @__PURE__ */ React.createElement("span", null, contact.name)));
+    }, /* @__PURE__ */ React.createElement("span", null, contact.name))));
   })))));
 };
 export default WorkPage;
@@ -53,23 +53,33 @@ const ContactBlock = styled.li`
         font-size: 9rem;
     }
 
+    span {
+        transition: all ease 300ms;
+        background: none;
+        padding: 1rem .5rem;
+
+        &:hover {
+            background: #000;
+        }
+
+        @media (hover: none) {
+        &:hover {
+            background: none;
+        }
+}
+    }
+
     a {
         color: #fff;
         text-decoration: none;
         transition: all ease 300ms;
+        background: none;
+        padding: 1rem;
 
         &:after {
-            content: ", ";
+            content: ",";
             color: #fff;
             transition: all ease 300ms;
-        }
-
-        &:hover {
-            color: red;
-
-            &:after {
-                color: red;
-            }
         }
     }
 

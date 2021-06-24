@@ -1,7 +1,7 @@
 import React from "../../_snowpack/pkg/react.js";
 import styled from "../../_snowpack/pkg/styled-components.js";
 import {motion} from "../../_snowpack/pkg/framer-motion.js";
-import headshot from "../../img/me.png.proxy.js";
+import headshot from "../../img/me-min.png.proxy.js";
 const transition = {duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96]};
 const AboutPage = () => {
   return /* @__PURE__ */ React.createElement(Wrapper, null, /* @__PURE__ */ React.createElement(Pane, {
@@ -10,7 +10,10 @@ const AboutPage = () => {
   }, /* @__PURE__ */ React.createElement(Header, {
     inital: {opacity: 0},
     animate: {opacity: 1}
-  }, "About"), /* @__PURE__ */ React.createElement(FlexWrapper, null, /* @__PURE__ */ React.createElement(TextWrapper, null, /* @__PURE__ */ React.createElement(AboutList, null, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Pronouns:"), " they/them"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Sign:"), " virgo"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Currently learning:"), " UX, three.js, intermediate react, French"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Interests:"), " creative development, accessibility, experimental animation, language learning, equitable design, post-structuralism"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Inspiration:"), " liminal spaces, cursed images, mark rothko, beijing, earthbound"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Role Models:"), " mortis ghost, chaz bear"))), /* @__PURE__ */ React.createElement(ImageWrapper, null, /* @__PURE__ */ React.createElement(MainPhoto, {
+  }, "About"), /* @__PURE__ */ React.createElement(FlexWrapper, null, /* @__PURE__ */ React.createElement(TextWrapper, null, /* @__PURE__ */ React.createElement(AboutList, null, /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Pronouns:"), " they/them"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Sign:"), " virgo"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Currently learning:"), " UX, three.js, intermediate react, French"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Interests:"), " creative development, accessibility, experimental animation, language learning, equitable design, post-structuralism"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Inspiration:"), " liminal spaces, cursed images, mark rothko, beijing, earthbound"), /* @__PURE__ */ React.createElement("li", null, /* @__PURE__ */ React.createElement("span", null, "Role Models:"), " mortis ghost, chaz bear"))), /* @__PURE__ */ React.createElement(ImageWrapper, {
+    inital: {opacity: 0},
+    animate: {opacity: 1}
+  }, /* @__PURE__ */ React.createElement(MainPhoto, {
     src: headshot
   })))));
 };
@@ -44,7 +47,7 @@ const FlexWrapper = styled.div`
         display: flex;
     }
 `;
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(motion.div)`
     flex: 0 0 50%;
     position: relative;
     display: flex;
