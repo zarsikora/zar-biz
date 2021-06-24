@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 //Components
 import Shader from "./../Shader";
-import GrossCake from './../../img/gross-cake.png';
+import GrossCake from './../../img/gross-cake-min.png';
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -19,9 +19,11 @@ const WorkPage = () => {
                         {contactData.map((contact) => {
                             return (
                                 <ContactBlock key={contact.name}>
-                                    <a target="_BLANK" href={contact.link} >
-                                        <span>{contact.name}</span>
-                                    </a>
+                                    <span>
+                                        <a target="_BLANK" href={contact.link} >
+                                            <span>{contact.name}</span>
+                                        </a>
+                                    </span>
                                 </ContactBlock>
                             )
                         })}
@@ -67,23 +69,33 @@ const ContactBlock = styled.li`
         font-size: 9rem;
     }
 
+    span {
+        transition: all ease 300ms;
+        background: none;
+        padding: 1rem;
+
+        &:hover {
+            background: #000;
+        }
+
+        @media (hover: none) {
+        &:hover {
+            background: none;
+        }
+}
+    }
+
     a {
         color: #fff;
         text-decoration: none;
         transition: all ease 300ms;
+        background: none;
+        padding: 1rem;
 
         &:after {
             content: ", ";
             color: #fff;
             transition: all ease 300ms;
-        }
-
-        &:hover {
-            color: red;
-
-            &:after {
-                color: red;
-            }
         }
     }
 

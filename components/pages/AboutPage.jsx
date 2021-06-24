@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 //Media
-import headshot from "./../../img/me.png";
+import headshot from "./../../img/me-min.png";
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 
@@ -25,7 +25,7 @@ const AboutPage = () => {
                         </AboutList>
                     </TextWrapper>
 
-                    <ImageWrapper>
+                    <ImageWrapper inital={{ opacity: 0 }} animate={{ opacity: 1 }}>
                         <MainPhoto src={headshot} />
                     </ImageWrapper>
                 </FlexWrapper>
@@ -69,7 +69,7 @@ const FlexWrapper = styled.div`
     }
 `
 
-const ImageWrapper = styled.div`
+const ImageWrapper = styled(motion.div)`
     flex: 0 0 50%;
     position: relative;
     display: flex;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 //Components
 import Shader from "./../Shader";
-import FreshSites from "./../../img/fresh-sites.png"
+import FreshSites from "./../../img/fresh-sites-min.png"
 
 const container = {
     hidden: { opacity: 0 },
