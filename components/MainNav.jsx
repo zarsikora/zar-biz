@@ -78,7 +78,7 @@ const MainNav = ({ handleMainNavRender }) => {
                     </NavItem>
                     <NavItem onClick={() => handleMainNavRender()}>
                         <Link to="/about">
-                            About Me
+                            About
                         </Link>
                     </NavItem>
                     <NavItem onClick={() => handleMainNavRender()}>

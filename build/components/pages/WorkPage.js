@@ -86,7 +86,6 @@ const WorkBlock = styled(motion.li)`
     margin: 2rem auto;
     position: relative;
     transition: all ease 300ms;
-    // opacity: 0;
     @media(min-width: 992px){
         width: 50%;
     }
@@ -120,7 +119,7 @@ const WorkBlock = styled(motion.li)`
         text-decoration: none;
         box-sizing: border-box;
         display: block;
-        padding: 5rem;
+        padding: 5rem 2rem;
     }
 `;
 const workData = [

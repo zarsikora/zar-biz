@@ -74,7 +74,7 @@ const MainNav = ({handleMainNavRender}) => {
     onClick: () => handleMainNavRender()
   }, /* @__PURE__ */ React.createElement(Link, {
     to: "/about"
-  }, "About Me")), /* @__PURE__ */ React.createElement(NavItem, {
+  }, "About")), /* @__PURE__ */ React.createElement(NavItem, {
     onClick: () => handleMainNavRender()
   }, /* @__PURE__ */ React.createElement(Link, {
     to: "/contact"

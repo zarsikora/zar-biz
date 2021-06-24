@@ -54,19 +54,21 @@ const ContactBlock = styled.li`
     }
 
     span {
-        transition: all ease 300ms;
-        background: none;
-        padding: 1rem .5rem;
-
-        &:hover {
-            background: #000;
-        }
-
-        @media (hover: none) {
-        &:hover {
+        @media(min-width: 768px){
+            transition: all ease 300ms;
             background: none;
+            padding: 1rem .5rem;
+
+            &:hover {
+                background: #000;
+            }
+
+            @media (hover: none) {
+                &:hover {
+                    background: none;
+                }
+            }     
         }
-}
     }
 
     a {

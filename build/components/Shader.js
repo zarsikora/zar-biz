@@ -100,7 +100,7 @@ const Shader = ({img, opacity}) => {
   }, []);
   return /* @__PURE__ */ React.createElement(motion.div, {
     inital: {opacity: 0},
-    animate: {opacity: 0.5},
+    animate: {opacity: 0.4},
     ref: containerRef,
     style: {width: "100vw", height: "100vh", opacity, position: "fixed"}
   }, /* @__PURE__ */ React.createElement("canvas", {

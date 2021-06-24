@@ -31,6 +31,11 @@ const AudioBtn = styled.button`
     border: none;
     z-index: 999;
     position: absolute;
+    display: none;
+
+    @media(min-width: 768px){
+        display: block
+    }
 
     img {
         width: 3rem;
