@@ -47,10 +47,11 @@ const ContactList = styled.ul`
 `;
 const ContactBlock = styled.li`
     font-size: 5rem;
-    display: inline;
+    display: block;
     position: relative;
     @media(min-width: 768px){
         font-size: 9rem;
+        display: inline;
     }
 
     span {
