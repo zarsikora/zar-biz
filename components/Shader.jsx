@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import GlslCanvas from "glslCanvas";
 import { motion } from "framer-motion";
 
-const Shader = ({ img, opacity }) => {
+const Shader = ({ img, opacity, alt }) => {
 
   const frag = `
   #ifdef GL_ES
@@ -116,7 +116,9 @@ const Shader = ({ img, opacity }) => {
   // maybe adjust the return to have the canvas be smaller on the page
   return (
     <motion.div inital={{ opacity: 0 }} animate={{ opacity: .4 }} ref={containerRef} style={{ width: "100vw", height: "100vh", opacity: opacity, position: "fixed" }}>
-      <canvas ref={canvasRef}></canvas>
+      <canvas ref={canvasRef}>
+        <p>{alt}</p>
+      </canvas>
     </motion.div>
   );
 }

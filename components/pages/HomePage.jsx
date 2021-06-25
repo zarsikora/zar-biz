@@ -16,7 +16,7 @@ const HomePage = () => {
             <Wrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 <div>
                     <Jumbotron text="HOWDY" color="#fff" opacity="1" />
-                    <ShaderImage img={Hamburglar} />
+                    <ShaderImage img={Hamburglar} alt="Image description: Vintage image of the Hamburglar being disrupted by WebGL shaders" />
                     <SubHeader>I'm Zar, a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics.</SubHeader>
 
                     <CallToAction>

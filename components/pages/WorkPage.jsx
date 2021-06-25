@@ -24,7 +24,7 @@ const WorkPage = () => {
     return (
         <>
             <Wrapper>
-                <Shader img={FreshSites} opacity=".5" />
+                <Shader img={FreshSites} opacity=".5" alt="Vintage photography of a hand reaching into a full refrigerator, warped by WebGL shaders" />
 
                 <Pane>
                     <Header inital={{ opacity: 0 }} animate={{ opacity: 1 }}>Work</Header>
@@ -34,7 +34,7 @@ const WorkPage = () => {
                                 <WorkBlock variants={listItem} key={work.name} bg={work.bg} text={work.text}>
                                     <a target="_BLANK" href={work.link} >
                                         <span>{work.name}</span>
-                                        <img src={work.img} />
+                                        <img src={work.img} alt={work.alt} />
                                     </a>
                                 </WorkBlock>
                             )
@@ -139,34 +139,39 @@ const workData = [
         link: "https://www.alaradcapital.com/",
         bg: "#27331d",
         text: "#bd8e65",
-        img: "./../../img/work/alarad-peek.png"
+        img: "./../../img/work/alarad-peek.png",
+        alt: "Green and gold geometric designs of Alarad brand kit"
     },
     {
         name: "Steel Root",
         link: "https://steelroot.us/",
         bg: "#181d40",
         text: "#01adcb",
-        img: "./../../img/work/sr-peek.png"
+        img: "./../../img/work/sr-peek.png",
+        alt: "Cyborg with glowing eyes"
     },
     {
         name: "DriveForce",
         link: "https://driveforce.golf",
         bg: "#919A6B",
         text: "#081D1A",
-        img: "./../../img/work/df-peek.png"
+        img: "./../../img/work/df-peek.png",
+        alt: "A man swinging a golf club adorned with a semicircular graphic to accentute the swing motion"
     },
     {
         name: "TransHealth",
         link: "https://www.transhealth.org/",
         bg: "#96b0c5",
         text: "#2a275b",
-        img: "./../../img/work/th-peek.png"
+        img: "./../../img/work/th-peek.png",
+        alt: "The Transhealth logo"
     },
     {
         name: "ThinkForward",
         link: "https://thinkforwardfinancial.com/home/",
         bg: "#e16e37",
         text: "#fff",
-        img: "./../../img/work/tff-peek.png"
+        img: "./../../img/work/tff-peek.png",
+        alt: "A diverse group talk at a meeting table"
     }
 ]

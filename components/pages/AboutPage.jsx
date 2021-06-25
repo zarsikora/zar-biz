@@ -26,7 +26,7 @@ const AboutPage = () => {
                     </TextWrapper>
 
                     <ImageWrapper inital={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                        <MainPhoto src={headshot} />
+                        <MainPhoto src={headshot} alt="Portrait of Zar in a suit, sitting at a table covered in bright vintage food. They are being handed a crystal cup of multicolor jello" />
                     </ImageWrapper>
                 </FlexWrapper>
             </Pane>

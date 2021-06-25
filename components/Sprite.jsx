@@ -8,7 +8,7 @@ const Sprite = ({ handleMainNavRender }) => {
     return( 
         <>
             <SpriteWrapper style={{top: topPos, right: rightPos}} className="sprite-wrapper" onClick={ () => handleMainNavRender()} >
-                <SpriteImg src="./../img/sprite.png" />
+                <SpriteImg alt="Illustrative depiction of Zar, they have shoulder length hair and look impassive" src="./../img/sprite.png" />
                 <SpeechBubble src="./../img/click-me.png" />
             </SpriteWrapper>
         </>

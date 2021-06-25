@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import GlslCanvas from "glslCanvas";
 
-const ShaderImage = ({ img }) => {
+const ShaderImage = ({ img, alt }) => {
 
   const frag = `
   #ifdef GL_ES
@@ -115,7 +115,9 @@ const ShaderImage = ({ img }) => {
   // maybe adjust the return to have the canvas be smaller on the page
   return (
     <div ref={containerRef} style={{ width: "50vw", height: "50vh", margin: "0 auto" }}>
-      <canvas ref={canvasRef}></canvas>
+      <canvas ref={canvasRef}>
+        <p>{alt}</p>
+      </canvas>
     </div>
   );
 }

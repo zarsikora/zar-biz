@@ -11,7 +11,7 @@ const WorkPage = () => {
     return (
         <>
             <Wrapper initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <Shader img={GrossCake} opacity=".3" />
+                <Shader img={GrossCake} opacity=".3" alt="Image description: Vintage photography of vibrant berry pie slices are disrupted by WebGL shaders" />
 
                 <Pane initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
 
