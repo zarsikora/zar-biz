@@ -24,7 +24,8 @@ const App = () => {
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(WebfontLoader, {
     config: webFontConfig
   }, /* @__PURE__ */ React.createElement(Router, null, /* @__PURE__ */ React.createElement(GlobalStyle, null), /* @__PURE__ */ React.createElement(AudioButton, null), /* @__PURE__ */ React.createElement(Sprite, {
-    handleMainNavRender
+    handleMainNavRender,
+    isNavActive
   }), /* @__PURE__ */ React.createElement(AnimatePresence, null, isNavActive && /* @__PURE__ */ React.createElement(MainNav, {
     handleMainNavRender
   })), /* @__PURE__ */ React.createElement(AnimatePresence, {

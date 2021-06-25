@@ -1,15 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Sprite = ({ handleMainNavRender }) => {
+const Sprite = ({ handleMainNavRender, isNavActive }) => {
     let rightPos = "2rem";
     let topPos = "2rem";
 
     return( 
         <>
-            <SpriteWrapper style={{top: topPos, right: rightPos}} className="sprite-wrapper" onClick={ () => handleMainNavRender()} >
-                <SpriteImg alt="Illustrative depiction of Zar, they have shoulder length hair and look impassive" src="./../img/sprite.png" />
-                <SpeechBubble src="./../img/click-me.png" />
+            <SpriteWrapper 
+                style={{top: topPos, right: rightPos}} 
+                className="sprite-wrapper" 
+                onClick={ () => handleMainNavRender()} 
+                onKeyDown={() => handleMainNavRender()}
+                role="button"
+                aria-pressed={isNavActive}
+                aria-label="Click to toggle navigation"
+            >
+                <SpriteImg 
+                    alt="Illustrative depiction of Zar, they have shoulder length hair and look impassive" 
+                    src="./../img/sprite.png" 
+                />
+
+                <SpeechBubble alt="Pixel art speech bubble with text that reads 'Click Me'" src="./../img/click-me.png" />
+
             </SpriteWrapper>
         </>
     );

@@ -65,19 +65,23 @@ const MainNav = ({handleMainNavRender}) => {
   }, /* @__PURE__ */ React.createElement(Nav, null, /* @__PURE__ */ React.createElement(NavItem, {
     onClick: () => handleMainNavRender()
   }, /* @__PURE__ */ React.createElement(Link, {
-    to: "/"
+    to: "/",
+    "aria-label": "Navigate to home page"
   }, "Home")), /* @__PURE__ */ React.createElement(NavItem, {
     onClick: () => handleMainNavRender()
   }, /* @__PURE__ */ React.createElement(Link, {
-    to: "/work"
+    to: "/work",
+    "aria-label": "Navigate to work page"
   }, "Work")), /* @__PURE__ */ React.createElement(NavItem, {
     onClick: () => handleMainNavRender()
   }, /* @__PURE__ */ React.createElement(Link, {
-    to: "/about"
+    to: "/about",
+    "aria-label": "Navigate to about page"
   }, "About")), /* @__PURE__ */ React.createElement(NavItem, {
     onClick: () => handleMainNavRender()
   }, /* @__PURE__ */ React.createElement(Link, {
-    to: "/contact"
+    to: "/contact",
+    "aria-label": "Navigate to contact page"
   }, "Contact")))));
 };
 export default MainNav;

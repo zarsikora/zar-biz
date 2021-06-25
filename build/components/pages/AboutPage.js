@@ -14,7 +14,8 @@ const AboutPage = () => {
     inital: {opacity: 0},
     animate: {opacity: 1}
   }, /* @__PURE__ */ React.createElement(MainPhoto, {
-    src: headshot
+    src: headshot,
+    alt: "Portrait of Zar in a suit, sitting at a table covered in bright vintage food. They are being handed a crystal cup of multicolor jello"
   })))));
 };
 export default AboutPage;

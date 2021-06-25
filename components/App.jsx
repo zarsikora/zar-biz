@@ -36,7 +36,7 @@ const App = () => {
                     <GlobalStyle />
                     <AudioButton />
 
-                    <Sprite handleMainNavRender={handleMainNavRender} />
+                    <Sprite handleMainNavRender={handleMainNavRender} isNavActive={isNavActive} />
 
                     <AnimatePresence>
                         {isNavActive && <MainNav handleMainNavRender={handleMainNavRender} />}

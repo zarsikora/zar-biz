@@ -1,15 +1,21 @@
 import React from "../_snowpack/pkg/react.js";
 import styled from "../_snowpack/pkg/styled-components.js";
-const Sprite = ({handleMainNavRender}) => {
+const Sprite = ({handleMainNavRender, isNavActive}) => {
   let rightPos = "2rem";
   let topPos = "2rem";
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(SpriteWrapper, {
     style: {top: topPos, right: rightPos},
     className: "sprite-wrapper",
-    onClick: () => handleMainNavRender()
+    onClick: () => handleMainNavRender(),
+    onKeyDown: () => handleMainNavRender(),
+    role: "button",
+    "aria-pressed": isNavActive,
+    "aria-label": "Click to toggle navigation"
   }, /* @__PURE__ */ React.createElement(SpriteImg, {
+    alt: "Illustrative depiction of Zar, they have shoulder length hair and look impassive",
     src: "./../img/sprite.png"
   }), /* @__PURE__ */ React.createElement(SpeechBubble, {
+    alt: "Pixel art speech bubble with text that reads 'Click Me'",
     src: "./../img/click-me.png"
   })));
 };

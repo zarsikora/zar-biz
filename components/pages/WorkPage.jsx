@@ -32,7 +32,7 @@ const WorkPage = () => {
                         {workData.map((work) => {
                             return (
                                 <WorkBlock variants={listItem} key={work.name} bg={work.bg} text={work.text}>
-                                    <a target="_BLANK" href={work.link} >
+                                    <a target="_BLANK" href={work.link} aria-label={work.label} >
                                         <span>{work.name}</span>
                                         <img src={work.img} alt={work.alt} />
                                     </a>
@@ -140,7 +140,8 @@ const workData = [
         bg: "#27331d",
         text: "#bd8e65",
         img: "./../../img/work/alarad-peek.png",
-        alt: "Green and gold geometric designs of Alarad brand kit"
+        alt: "Green and gold geometric designs of Alarad brand kit",
+        label: "View Alarad project"
     },
     {
         name: "Steel Root",
@@ -148,7 +149,8 @@ const workData = [
         bg: "#181d40",
         text: "#01adcb",
         img: "./../../img/work/sr-peek.png",
-        alt: "Cyborg with glowing eyes"
+        alt: "Cyborg with glowing eyes",
+        label: "View Steel Root project"
     },
     {
         name: "DriveForce",
@@ -156,7 +158,8 @@ const workData = [
         bg: "#919A6B",
         text: "#081D1A",
         img: "./../../img/work/df-peek.png",
-        alt: "A man swinging a golf club adorned with a semicircular graphic to accentute the swing motion"
+        alt: "A man swinging a golf club adorned with a semicircular graphic to accentute the swing motion",
+        label: "View DriveForce project"
     },
     {
         name: "TransHealth",
@@ -164,7 +167,8 @@ const workData = [
         bg: "#96b0c5",
         text: "#2a275b",
         img: "./../../img/work/th-peek.png",
-        alt: "The Transhealth logo"
+        alt: "The Transhealth logo",
+        label: "View Transhealth project"
     },
     {
         name: "ThinkForward",
@@ -172,6 +176,7 @@ const workData = [
         bg: "#e16e37",
         text: "#fff",
         img: "./../../img/work/tff-peek.png",
-        alt: "A diverse group talk at a meeting table"
+        alt: "A diverse group talk at a meeting table",
+        label: "View ThinkForward project"
     }
 ]

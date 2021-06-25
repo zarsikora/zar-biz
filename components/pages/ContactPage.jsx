@@ -20,7 +20,7 @@ const WorkPage = () => {
                             return (
                                 <ContactBlock key={contact.name}>
                                     <span>
-                                        <a target="_BLANK" href={contact.link} >
+                                        <a target="_BLANK" href={contact.link} aria-label={contact.label} >
                                             <span>{contact.name}</span>
                                         </a>
                                     </span>
@@ -114,26 +114,32 @@ const ContactBlock = styled.li`
 const contactData = [
     {
         name: "Email Me",
-        link: "mailto:howdy@zarah.biz"
+        link: "mailto:howdy@zarah.biz",
+        label: "Email me"
     },
     {
         name: "Dribbble",
-        link: "https://dribbble.com/zaar"
+        link: "https://dribbble.com/zaar",
+        label: "Visit my Dribbble"
     },
     {
         name: "Instagram (Main)",
-        link: "https://www.instagram.com/jellodemon/"
+        link: "https://www.instagram.com/jellodemon/",
+        label: "Visit my personal Instagram"
     },
     {
         name: "Instagram (Design)",
-        link: "https://www.instagram.com/zaaaaaaaaaaaaaaar/"
+        link: "https://www.instagram.com/zaaaaaaaaaaaaaaar/",
+        label: "Visit my design Instagram"
     },
     {
         name: "LinkedIn",
-        link: "https://www.linkedin.com/in/zarah-sikora-61980864/"
+        link: "https://www.linkedin.com/in/zarah-sikora-61980864/",
+        label: "Visit my LinkedIn"
     },
     {
         name: "Resume",
-        link: "./../../files/z-resume-0608.pdf"
+        link: "./../../files/z-resume-0608.pdf",
+        label: "Download my resume"
     }
 ]

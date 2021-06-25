@@ -67,22 +67,22 @@ const MainNav = ({ handleMainNavRender }) => {
             <NavPane variants={navPane} initial="hidden" animate="show" >
                 <Nav>
                     <NavItem onClick={() => handleMainNavRender()}>
-                        <Link to="/">
+                        <Link to="/" aria-label="Navigate to home page">
                             Home
                         </Link>
                     </NavItem>
                     <NavItem onClick={() => handleMainNavRender()}>
-                        <Link to="/work">
+                        <Link to="/work" aria-label="Navigate to work page">
                             Work
                         </Link>
                     </NavItem>
                     <NavItem onClick={() => handleMainNavRender()}>
-                        <Link to="/about">
+                        <Link to="/about" aria-label="Navigate to about page">
                             About
                         </Link>
                     </NavItem>
                     <NavItem onClick={() => handleMainNavRender()}>
-                        <Link to="/contact">
+                        <Link to="/contact" aria-label="Navigate to contact page">
                             Contact
                         </Link>
                     </NavItem>

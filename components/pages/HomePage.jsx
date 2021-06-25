@@ -20,7 +20,9 @@ const HomePage = () => {
                     <SubHeader>I'm Zar, a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics.</SubHeader>
 
                     <CallToAction>
-                        <Link to="/work">View my work. <span>&#128121;</span> </Link>
+                        <Link to="/work" aria-label="View my work">
+                            View my work. <span>&#128121;</span> 
+                        </Link>
                     </CallToAction>
                 </div>
             </Wrapper>

@@ -17,10 +17,12 @@ const HomePage = () => {
     color: "#fff",
     opacity: "1"
   }), /* @__PURE__ */ React.createElement(ShaderImage, {
-    img: Hamburglar
+    img: Hamburglar,
+    alt: "Image description: Vintage image of the Hamburglar being disrupted by WebGL shaders"
   }), /* @__PURE__ */ React.createElement(SubHeader, null, "I'm Zar, a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics."), /* @__PURE__ */ React.createElement(CallToAction, null, /* @__PURE__ */ React.createElement(Link, {
-    to: "/work"
-  }, "View my work. ", /* @__PURE__ */ React.createElement("span", null, "👹"), " ")))));
+    to: "/work",
+    "aria-label": "View my work"
+  }, "View my work. ", /* @__PURE__ */ React.createElement("span", null, "👹"))))));
 };
 export default HomePage;
 const Wrapper = styled(motion.div)`

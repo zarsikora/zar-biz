@@ -1,7 +1,7 @@
 import React, {useEffect, useRef} from "../_snowpack/pkg/react.js";
 import GlslCanvas from "../_snowpack/pkg/glslCanvas.js";
 import {motion} from "../_snowpack/pkg/framer-motion.js";
-const Shader = ({img, opacity}) => {
+const Shader = ({img, opacity, alt}) => {
   const frag = `
   #ifdef GL_ES
   precision highp float;
@@ -105,6 +105,6 @@ const Shader = ({img, opacity}) => {
     style: {width: "100vw", height: "100vh", opacity, position: "fixed"}
   }, /* @__PURE__ */ React.createElement("canvas", {
     ref: canvasRef
-  }));
+  }, /* @__PURE__ */ React.createElement("p", null, alt)));
 };
 export default Shader;

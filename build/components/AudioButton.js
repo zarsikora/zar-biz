@@ -19,7 +19,10 @@ const AudioButton = () => {
     ref,
     src: rainyDay
   }), /* @__PURE__ */ React.createElement(AudioBtn, {
-    onClick: songControls
+    "aria-pressed": isPlaying,
+    onClick: songControls,
+    onKeyDown: songControls,
+    "aria-label": "Click to toggle music on and off"
   }, /* @__PURE__ */ React.createElement("img", {
     src: isPlaying ? speakerIcon : muteIcon
   })));

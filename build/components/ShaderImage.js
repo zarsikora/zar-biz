@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from "../_snowpack/pkg/react.js";
 import GlslCanvas from "../_snowpack/pkg/glslCanvas.js";
-const ShaderImage = ({img}) => {
+const ShaderImage = ({img, alt}) => {
   const frag = `
   #ifdef GL_ES
   precision highp float;
@@ -102,6 +102,6 @@ const ShaderImage = ({img}) => {
     style: {width: "50vw", height: "50vh", margin: "0 auto"}
   }, /* @__PURE__ */ React.createElement("canvas", {
     ref: canvasRef
-  }));
+  }, /* @__PURE__ */ React.createElement("p", null, alt)));
 };
 export default ShaderImage;

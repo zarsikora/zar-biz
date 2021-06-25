@@ -25,7 +25,14 @@ const AudioButton = () => {
                 ref= {ref}
                 src= {rainyDay}
             />
-            <AudioBtn onClick={songControls}><img src={isPlaying ? speakerIcon : muteIcon} /></AudioBtn>
+            <AudioBtn 
+                aria-pressed={isPlaying} 
+                onClick={songControls} 
+                onKeyDown={songControls}
+                aria-label="Click to toggle music on and off"
+            >
+                <img src={isPlaying ? speakerIcon : muteIcon} />
+            </AudioBtn>
         </>
     )
 }
