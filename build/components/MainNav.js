@@ -62,7 +62,10 @@ const MainNav = ({handleMainNavRender}) => {
     variants: navPane,
     initial: "hidden",
     animate: "show"
-  }, /* @__PURE__ */ React.createElement(Nav, null, /* @__PURE__ */ React.createElement(NavItem, {
+  }, /* @__PURE__ */ React.createElement(Nav, {
+    role: "navigation",
+    "aria-label": "Main navigation"
+  }, /* @__PURE__ */ React.createElement(NavItem, {
     onClick: () => handleMainNavRender()
   }, /* @__PURE__ */ React.createElement(Link, {
     to: "/",

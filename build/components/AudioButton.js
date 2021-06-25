@@ -24,6 +24,7 @@ const AudioButton = () => {
     onKeyDown: songControls,
     "aria-label": "Click to toggle music on and off"
   }, /* @__PURE__ */ React.createElement("img", {
+    alt: isPlaying ? "Sound playing icon" : "Sound muted icon",
     src: isPlaying ? speakerIcon : muteIcon
   })));
 };

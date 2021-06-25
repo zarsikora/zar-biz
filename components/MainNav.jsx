@@ -65,7 +65,7 @@ const MainNav = ({ handleMainNavRender }) => {
             </WaveIn>
 
             <NavPane variants={navPane} initial="hidden" animate="show" >
-                <Nav>
+                <Nav role="navigation" aria-label="Main navigation">
                     <NavItem onClick={() => handleMainNavRender()}>
                         <Link to="/" aria-label="Navigate to home page">
                             Home
