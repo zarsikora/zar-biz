@@ -116,7 +116,7 @@ const ShaderImage = ({ img, alt }) => {
   return (
     <div ref={containerRef} style={{ width: "50vw", height: "50vh", margin: "0 auto" }}>
       <canvas ref={canvasRef}>
-        <p>{alt}</p>
+        <p class="alt">{alt}</p>
       </canvas>
     </div>
   );

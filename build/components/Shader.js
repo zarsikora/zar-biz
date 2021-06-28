@@ -105,6 +105,8 @@ const Shader = ({img, opacity, alt}) => {
     inital: {opacity: 0},
     animate: {opacity: 1},
     ref: canvasRef
-  }, /* @__PURE__ */ React.createElement("p", null, alt)));
+  }, /* @__PURE__ */ React.createElement("p", {
+    class: "alt"
+  }, alt)));
 };
 export default Shader;

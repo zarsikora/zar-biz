@@ -102,6 +102,8 @@ const ShaderImage = ({img, alt}) => {
     style: {width: "50vw", height: "50vh", margin: "0 auto"}
   }, /* @__PURE__ */ React.createElement("canvas", {
     ref: canvasRef
-  }, /* @__PURE__ */ React.createElement("p", null, alt)));
+  }, /* @__PURE__ */ React.createElement("p", {
+    class: "alt"
+  }, alt)));
 };
 export default ShaderImage;

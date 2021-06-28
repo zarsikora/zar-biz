@@ -106,6 +106,11 @@ span.small {
     opacity: .5;
 }
 
+
+p.alt {
+    font-family: 'Roboto';
+}
+
 // ANIMATION
 @keyframes bounce {
   0% {top: -2px}

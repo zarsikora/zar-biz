@@ -117,7 +117,7 @@ const Shader = ({ img, opacity, alt }) => {
   return (
     <div ref={containerRef} style={{ width: "100vw", height: "100vh", opacity: opacity, position: "fixed" }}>
       <motion.canvas inital={{ opacity: 0 }} animate={{ opacity: 1 }} ref={canvasRef}>
-        <p>{alt}</p>
+        <p class="alt">{alt}</p>
       </motion.canvas>
     </div>
   );
