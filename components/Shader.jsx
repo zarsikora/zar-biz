@@ -115,11 +115,11 @@ const Shader = ({ img, opacity, alt }) => {
 
   // maybe adjust the return to have the canvas be smaller on the page
   return (
-    <motion.div inital={{ opacity: 0 }} animate={{ opacity: .4 }} ref={containerRef} style={{ width: "100vw", height: "100vh", opacity: opacity, position: "fixed" }}>
-      <canvas ref={canvasRef}>
+    <div ref={containerRef} style={{ width: "100vw", height: "100vh", opacity: opacity, position: "fixed" }}>
+      <motion.canvas inital={{ opacity: 0 }} animate={{ opacity: 1 }} ref={canvasRef}>
         <p>{alt}</p>
-      </canvas>
-    </motion.div>
+      </motion.canvas>
+    </div>
   );
 }
 

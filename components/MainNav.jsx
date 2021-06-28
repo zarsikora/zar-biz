@@ -33,20 +33,6 @@ const navPane = {
     }
 }
 
-const exitPane = {
-    hidden: {
-        scaleY: 0,
-        originY: 1
-    },
-    leave: { 
-        scaleY : 1, 
-        transition: {
-            duration: .5,
-            ease: [0.43, 0.13, 0.23, 0.96]
-        }
-    }
-}
-
 const MainNav = ({ handleMainNavRender }) => {
 
     return (
@@ -63,6 +49,8 @@ const MainNav = ({ handleMainNavRender }) => {
                     />
                 </motion.path>
             </WaveIn>
+
+            {/* TODO: get links to load in nicer */}
 
             <NavPane variants={navPane} initial="hidden" animate="show" >
                 <Nav role="navigation" aria-label="Main navigation">

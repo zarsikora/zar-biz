@@ -98,12 +98,12 @@ const Shader = ({img, opacity, alt}) => {
       window.removeEventListener("resize", handler);
     };
   }, []);
-  return /* @__PURE__ */ React.createElement(motion.div, {
-    inital: {opacity: 0},
-    animate: {opacity: 0.4},
+  return /* @__PURE__ */ React.createElement("div", {
     ref: containerRef,
     style: {width: "100vw", height: "100vh", opacity, position: "fixed"}
-  }, /* @__PURE__ */ React.createElement("canvas", {
+  }, /* @__PURE__ */ React.createElement(motion.canvas, {
+    inital: {opacity: 0},
+    animate: {opacity: 1},
     ref: canvasRef
   }, /* @__PURE__ */ React.createElement("p", null, alt)));
 };

@@ -30,19 +30,6 @@ const navPane = {
     }
   }
 };
-const exitPane = {
-  hidden: {
-    scaleY: 0,
-    originY: 1
-  },
-  leave: {
-    scaleY: 1,
-    transition: {
-      duration: 0.5,
-      ease: [0.43, 0.13, 0.23, 0.96]
-    }
-  }
-};
 const MainNav = ({handleMainNavRender}) => {
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(WaveIn, {
     viewBox: "0 0 1920 1080",
