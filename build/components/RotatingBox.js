@@ -5,7 +5,8 @@ const RotatingBox = () => {
   const [active, setActive] = useState(false);
   useFrame(({clock}) => {
     const a = clock.getElapsedTime();
-    myMesh.current.rotation.x = a;
+    myMesh.current.rotation.x = 0.4 * a;
+    myMesh.current.rotation.y = 0.45 * a;
   });
   return /* @__PURE__ */ React.createElement("mesh", {
     scale: active ? 1.5 : 1,

@@ -7,7 +7,8 @@ const RotatingBox = () => {
 
     useFrame(({ clock }) => {
         const a = clock.getElapsedTime();
-        myMesh.current.rotation.x = a;
+        myMesh.current.rotation.x = 0.4 * a;
+        myMesh.current.rotation.y = 0.45 * a;
     });
 
     return (
