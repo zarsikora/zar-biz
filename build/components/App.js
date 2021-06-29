@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage.js";
 import AboutPage from "./pages/AboutPage.js";
 import WorkPage from "./pages/WorkPage.js";
 import ContactPage from "./pages/ContactPage.js";
+import PlaygroundPage from "./pages/PlaygroundPage.js";
 import AudioButton from "./AudioButton.js";
 import Sprite from "./Sprite.js";
 import MainNav from "./MainNav.js";
@@ -40,7 +41,9 @@ const App = () => {
     path: "/about"
   }, /* @__PURE__ */ React.createElement(AboutPage, null)), /* @__PURE__ */ React.createElement(Route, {
     path: "/contact"
-  }, /* @__PURE__ */ React.createElement(ContactPage, null)))))));
+  }, /* @__PURE__ */ React.createElement(ContactPage, null)), /* @__PURE__ */ React.createElement(Route, {
+    path: "/playground"
+  }, /* @__PURE__ */ React.createElement(PlaygroundPage, null)))))));
 };
 export default App;
 const dialogueObj = {

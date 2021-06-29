@@ -72,7 +72,12 @@ const MainNav = ({handleMainNavRender}) => {
   }, /* @__PURE__ */ React.createElement(Link, {
     to: "/contact",
     "aria-label": "Navigate to contact page"
-  }, "Contact")))));
+  }, "Contact")), /* @__PURE__ */ React.createElement(NavItem, {
+    onClick: () => handleMainNavRender()
+  }, /* @__PURE__ */ React.createElement(Link, {
+    to: "/playground",
+    "aria-label": "Navigate to playground page"
+  }, "Playground")))));
 };
 export default MainNav;
 const WaveIn = styled.svg`
@@ -120,12 +125,12 @@ const Nav = styled(motion.ul)`
         top: 5rem;
     }
     @media(min-width: 992px){
-        font-size: 10rem;
+        font-size: 8rem;
         top: 50%;
         transform: translate(-50%, -50%);
     }
     @media(min-width: 1440){
-        font-size: 8vw;
+        font-size: 7vw;
     }
 `;
 const NavItem = styled(motion.li)`

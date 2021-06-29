@@ -9,6 +9,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import WorkPage from "./pages/WorkPage";
 import ContactPage from "./pages/ContactPage";
+import PlaygroundPage from './pages/PlaygroundPage';
 //Components
 import AudioButton from './AudioButton';
 import Sprite from './Sprite';
@@ -58,6 +59,9 @@ const App = () => {
                             </Route>
                             <Route path="/contact">
                                 <ContactPage />
+                            </Route>
+                            <Route path="/playground">
+                                <PlaygroundPage />
                             </Route>
                         </Switch>
                     </AnimatePresence>

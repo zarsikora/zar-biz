@@ -74,7 +74,11 @@ const MainNav = ({ handleMainNavRender }) => {
                             Contact
                         </Link>
                     </NavItem>
-                    {/* playground */}
+                    <NavItem onClick={() => handleMainNavRender()}>
+                        <Link to="/playground" aria-label="Navigate to playground page">
+                            Playground
+                        </Link>
+                    </NavItem>
                 </Nav>
             </NavPane>
         </>
@@ -130,12 +134,12 @@ const Nav = styled(motion.ul)`
         top: 5rem;
     }
     @media(min-width: 992px){
-        font-size: 10rem;
+        font-size: 8rem;
         top: 50%;
         transform: translate(-50%, -50%);
     }
     @media(min-width: 1440){
-        font-size: 8vw;
+        font-size: 7vw;
     }
 `
 
