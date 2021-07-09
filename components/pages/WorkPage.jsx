@@ -34,6 +34,7 @@ const WorkPage = () => {
                                 <WorkBlock variants={listItem} key={work.name} bg={work.bg} text={work.text}>
                                     <a target="_BLANK" href={work.link} aria-label={work.label} >
                                         <span>{work.name}</span>
+                                        <p>{work.tags}</p>
                                         <img src={work.img} alt={work.alt} />
                                     </a>
                                 </WorkBlock>
@@ -109,6 +110,11 @@ const WorkBlock = styled(motion.li)`
                 position: relative;
                 z-index: 88; 
             }
+
+            a p {
+                color: #fff;
+                z-index: 88;
+            }
         }
     }
 
@@ -130,6 +136,14 @@ const WorkBlock = styled(motion.li)`
         box-sizing: border-box;
         display: block;
         padding: 5rem 2rem;
+
+        p {
+            transition: all ease 300ms;
+            font-size: 2rem;
+            display: block;
+            position: relative;
+            font-family: "Roboto";
+        }
     }
 `
 
@@ -141,7 +155,8 @@ const workData = [
         text: "#bd8e65",
         img: "./../../img/work/alarad-peek.png",
         alt: "Green and gold geometric designs of Alarad brand kit",
-        label: "View Alarad project"
+        label: "View Alarad project",
+        tags: "Development, Motion Design, Animation, Wordpress"
     },
     {
         name: "Steel Root",
@@ -150,7 +165,8 @@ const workData = [
         text: "#01adcb",
         img: "./../../img/work/sr-peek.png",
         alt: "Cyborg with glowing eyes",
-        label: "View Steel Root project"
+        label: "View Steel Root project",
+        tags: "Development, Accessibility, Performance, Wordpress"
     },
     {
         name: "DriveForce",
@@ -159,7 +175,8 @@ const workData = [
         text: "#081D1A",
         img: "./../../img/work/df-peek.png",
         alt: "A man swinging a golf club adorned with a semicircular graphic to accentute the swing motion",
-        label: "View DriveForce project"
+        label: "View DriveForce project",
+        tags: "Development, Animation, Ecommerce, Wordpress"
     },
     {
         name: "TransHealth",
@@ -168,7 +185,8 @@ const workData = [
         text: "#2a275b",
         img: "./../../img/work/th-peek.png",
         alt: "The Transhealth logo",
-        label: "View Transhealth project"
+        label: "View Transhealth project",
+        tags: "UX Research, Development, Accessibility, Wordpress"
     },
     {
         name: "ThinkForward",
@@ -177,6 +195,7 @@ const workData = [
         text: "#fff",
         img: "./../../img/work/tff-peek.png",
         alt: "A diverse group talk at a meeting table",
-        label: "View ThinkForward project"
+        label: "View ThinkForward project",
+        tags: "Development, Animation"
     }
 ]

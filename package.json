@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@dr-kobros/react-webfont-loader": "^8.0.0",
+    "@react-three/drei": "^7.0.3",
     "@react-three/fiber": "^7.0.1",
     "@snowpack/plugin-webpack": "^2.3.1",
     "@types/react-transition-group": "^4.4.1",

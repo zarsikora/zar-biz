@@ -1,17 +1,20 @@
 export default {
-    routes: [
+  // mount: {
+  //   public: '/',
+  // },
+  routes: [
+    {
+      match: 'routes',
+      src: '.*',
+      dest: '/index.html',
+    },
+  ],
+  plugins: [
+    [
+      '@snowpack/plugin-webpack',
       {
-        match: 'routes',
-        src: '.*',
-        dest: '/index.html',
+        /* see "Plugin Options" below */
       },
     ],
-    plugins: [
-      [
-        '@snowpack/plugin-webpack',
-        {
-          /* see "Plugin Options" below */
-        },
-      ],
-    ]
-  };
+  ]
+};

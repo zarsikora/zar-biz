@@ -1,6 +1,6 @@
-import React, {useRef, useState} from "../../_snowpack/pkg/react.js";
+import React, {useRef, useState, Suspense} from "../../_snowpack/pkg/react.js";
 import styled from "../../_snowpack/pkg/styled-components.js";
-import {Canvas, useFrame} from "../../_snowpack/pkg/@react-three/fiber.js";
+import {Canvas} from "../../_snowpack/pkg/@react-three/fiber.js";
 import RotatingBox from "../RotatingBox.js";
 const PlaygroundPage = () => {
   return /* @__PURE__ */ React.createElement(CanvasContainer, null, /* @__PURE__ */ React.createElement(Canvas, null, /* @__PURE__ */ React.createElement("ambientLight", {
