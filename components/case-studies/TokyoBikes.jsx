@@ -206,7 +206,7 @@ const TokyoBikes = () => {
                     <Heading>Conclusion</Heading>
 
                     <p>
-                        While this particular applicatiojn will not be moving into a production phase, usability study participants confirmed that 
+                        While this particular application will not be moving into a production phase, usability study participants confirmed that 
                         if built and launched, it had the potential to improve accessibility of cycling knowledge and help 
                         combat many barriers to entry into the cycling community for beginner hobbyists.
                     </p>
