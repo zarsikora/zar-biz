@@ -10,6 +10,8 @@ import AboutPage from './pages/AboutPage';
 import WorkPage from "./pages/WorkPage";
 import ContactPage from "./pages/ContactPage";
 import PlaygroundPage from './pages/PlaygroundPage';
+//Case Studies 
+import TokyoBikes from "./case-studies/TokyoBikes";
 //Components
 import AudioButton from './AudioButton';
 import Sprite from './Sprite';
@@ -62,6 +64,10 @@ const App = () => {
                             </Route>
                             <Route path="/playground">
                                 <PlaygroundPage />
+                            </Route>
+                            {/* WORK SINGLE PAGES */}
+                            <Route path="/tokyo-bikes">
+                                <TokyoBikes />
                             </Route>
                         </Switch>
                     </AnimatePresence>

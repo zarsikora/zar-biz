@@ -13,15 +13,13 @@ const AboutPage = () => {
                 <Header inital={{ opacity: 0 }} animate={{ opacity: 1 }}>About</Header>
                 <FlexWrapper>
                     <TextWrapper>
-                        {/* ADD A PARAGRAPH ABOUT SWITCH TO DEV, ETC */}
-                        {/* MAYBE CHANGE THIS TO BE HANDWRITTEN */}
                         <AboutList>
                             <li><span>Pronouns:</span> they/them</li>
                             <li><span>Sign:</span> virgo</li>
                             <li><span>Currently learning:</span> UX, three.js, intermediate react, French</li>
                             <li><span>Interests:</span> creative development, accessibility, experimental animation, language learning, equitable design, post-structuralism</li>
                             <li><span>Inspiration:</span> liminal spaces, cursed images, mark rothko, beijing, earthbound</li>
-                            <li><span>Role Models:</span> mortis ghost, chaz bear</li>
+                            <li><span>Role Models:</span> mortis ghost, chaz bear, leyland kirby</li>
                         </AboutList>
                     </TextWrapper>
 

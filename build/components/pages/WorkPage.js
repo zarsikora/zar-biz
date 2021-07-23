@@ -1,6 +1,7 @@
-import React from "../../_snowpack/pkg/react.js";
+import React, {useState} from "../../_snowpack/pkg/react.js";
 import styled from "../../_snowpack/pkg/styled-components.js";
 import {motion} from "../../_snowpack/pkg/framer-motion.js";
+import {useHistory} from "../../_snowpack/pkg/react-router-dom.js";
 import Shader from "../Shader.js";
 import FreshSites from "../../img/fresh-sites-min.png.proxy.js";
 const container = {
@@ -17,11 +18,15 @@ const listItem = {
   show: {opacity: 1}
 };
 const WorkPage = () => {
+  const [isModalActive, setIsModalActive] = useState(false);
+  const history = useHistory();
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Wrapper, null, /* @__PURE__ */ React.createElement(Shader, {
     img: FreshSites,
     opacity: ".5",
     alt: "Vintage photography of a hand reaching into a full refrigerator, warped by WebGL shaders"
-  }), /* @__PURE__ */ React.createElement(Pane, null, /* @__PURE__ */ React.createElement(Header, {
+  }), /* @__PURE__ */ React.createElement(Pane, null, isModalActive && /* @__PURE__ */ React.createElement(WorkModal, {
+    setIsModalActive
+  }), /* @__PURE__ */ React.createElement(Header, {
     inital: {opacity: 0},
     animate: {opacity: 1}
   }, "Work"), /* @__PURE__ */ React.createElement(WorkList, {
@@ -29,12 +34,21 @@ const WorkPage = () => {
     initial: "hidden",
     animate: "show"
   }, workData.map((work) => {
+    let internalLinkOnClick = () => {
+    };
+    if (work.type == "internal") {
+      internalLinkOnClick = (e) => {
+        e.preventDefault();
+        history.push(`/${work.slug}`);
+      };
+    }
     return /* @__PURE__ */ React.createElement(WorkBlock, {
       variants: listItem,
       key: work.name,
       bg: work.bg,
       text: work.text
     }, /* @__PURE__ */ React.createElement("a", {
+      onClick: internalLinkOnClick,
       target: "_BLANK",
       href: work.link,
       "aria-label": work.label
@@ -140,53 +154,81 @@ const WorkBlock = styled(motion.li)`
 `;
 const workData = [
   {
+    name: "Tokyo Bikes",
+    slug: "tokyo-bikes",
+    type: "internal",
+    link: "",
+    bg: "#1F2D76",
+    text: "#F7CF07",
+    img: "./../../img/work/tb-peek.png",
+    alt: "UX prototype mapping for lofi digital prototype",
+    label: "View Tokyo Bikes project",
+    tags: "UX Research, UX Design, Prototyping, User Testing, UI Design, Completed"
+  },
+  {
     name: "Alarad",
+    type: "external",
     link: "https://www.alaradcapital.com/",
     bg: "#27331d",
     text: "#bd8e65",
     img: "./../../img/work/alarad-peek.png",
     alt: "Green and gold geometric designs of Alarad brand kit",
     label: "View Alarad project",
-    tags: "Development, Motion Design, Animation, Wordpress"
+    tags: "Development, Motion Design, Animation, Wordpress, Completed"
+  },
+  {
+    name: "Automic Gold",
+    type: "external",
+    link: "https://www.automicgold.com/",
+    bg: "#FCE1E6",
+    text: "#18084d",
+    img: "./../../img/work/ag-peek.png",
+    alt: "",
+    label: "View Automic Gold project",
+    tags: "Development, Site Maintenance, Accessibility, Performance, Shopify, Ongoing"
   },
   {
     name: "Steel Root",
+    type: "external",
     link: "https://steelroot.us/",
     bg: "#181d40",
     text: "#01adcb",
     img: "./../../img/work/sr-peek.png",
     alt: "Cyborg with glowing eyes",
     label: "View Steel Root project",
-    tags: "Development, Accessibility, Performance, Wordpress"
+    tags: "Development, Accessibility, Performance, Wordpress, Completed"
   },
   {
     name: "DriveForce",
+    type: "external",
     link: "https://driveforce.golf",
     bg: "#919A6B",
     text: "#081D1A",
     img: "./../../img/work/df-peek.png",
     alt: "A man swinging a golf club adorned with a semicircular graphic to accentute the swing motion",
     label: "View DriveForce project",
-    tags: "Development, Animation, Ecommerce, Wordpress"
+    tags: "Development, Animation, Ecommerce, Wordpress, Completed"
   },
   {
     name: "TransHealth",
+    type: "external",
     link: "https://www.transhealth.org/",
     bg: "#96b0c5",
     text: "#2a275b",
     img: "./../../img/work/th-peek.png",
     alt: "The Transhealth logo",
     label: "View Transhealth project",
-    tags: "UX Research, Development, Accessibility, Wordpress"
+    tags: "UX Research, Development, Accessibility, Wordpress, Completed"
   },
   {
     name: "ThinkForward",
+    type: "external",
     link: "https://thinkforwardfinancial.com/home/",
     bg: "#e16e37",
     text: "#fff",
     img: "./../../img/work/tff-peek.png",
     alt: "A diverse group talk at a meeting table",
     label: "View ThinkForward project",
-    tags: "Development, Animation"
+    tags: "Development, Animation, Completed"
   }
 ];

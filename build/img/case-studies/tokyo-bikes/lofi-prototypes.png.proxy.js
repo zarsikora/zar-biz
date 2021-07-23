@@ -1,0 +1,1 @@
+export default "/img/case-studies/tokyo-bikes/lofi-prototypes.png";
