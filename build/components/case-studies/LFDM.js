@@ -1,8 +1,8 @@
 import React from "../../_snowpack/pkg/react.js";
 import styled from "../../_snowpack/pkg/styled-components.js";
 import Persona1 from "../../img/case-studies/lfdm/user-persona-1.png.proxy.js";
-import MobilePersona1 from "../../img/case-studies/tokyo-bikes/persona-mobile-1.png.proxy.js";
-import MobilePersona2 from "../../img/case-studies/tokyo-bikes/persona-mobile-2.png.proxy.js";
+import MobilePersona1 from "../../img/case-studies/lfdm/persona-mobile-1.png.proxy.js";
+import MobilePersona2 from "../../img/case-studies/lfdm/persona-mobile-2.png.proxy.js";
 import Persona2 from "../../img/case-studies/lfdm/user-persona-2.png.proxy.js";
 import RoughWiresGif from "../../img/case-studies/lfdm/rough-wires.gif.proxy.js";
 import PolishedDraft from "../../img/case-studies/lfdm/polished-draft.png.proxy.js";
@@ -30,13 +30,13 @@ const LesFleursDeMars = () => {
     alt: "User persona for Jean F - desktop version",
     src: Persona2
   })), /* @__PURE__ */ React.createElement(RichText, null, /* @__PURE__ */ React.createElement(Heading, null, "Paper Wires"), /* @__PURE__ */ React.createElement("p", null, "Once I established the basic information architecture for my web application, I moved on to drafting wires. For each screen of the desktop experience, I listed the elements that would need to be present and then began the process of iterating through possible configurations of these elements."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "Speedpaint of rough wires for product single design",
     src: RoughWiresGif
   }), /* @__PURE__ */ React.createElement("p", null, "I then combined my favorite parts of each configuration into a polished draft. Here's an example for the product display page, above the fold."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "Polished wireframe for the product single page",
     src: PolishedDraft
   }), /* @__PURE__ */ React.createElement("p", null, "I was clearly drinking a lot of coffee this day because my lines are incredibly wiggly.")), /* @__PURE__ */ React.createElement(RichText, null, /* @__PURE__ */ React.createElement(Heading, null, "Digital Wires"), /* @__PURE__ */ React.createElement("p", null, "Usually I would approach digital wireframes in a mobile-first manner. However, since my last project focused on mobile design, I started with desktop screens and made visual adjustments from there to mock up mobile configurations of each screen."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "A mockup of four low fidelity desktop wireframe screens",
     src: LofiPrototypes
   }), /* @__PURE__ */ React.createElement("p", null, "You can try out my low fidelity prototype ", /* @__PURE__ */ React.createElement("a", {
     href: "https://xd.adobe.com/view/f746f5ea-f154-4b25-acf4-3d8c9ff2c36d-a215/",
@@ -45,16 +45,16 @@ const LesFleursDeMars = () => {
     href: "https://xd.adobe.com/view/e1407f1b-4738-4183-83fa-47edd35612de-b413/",
     target: "_BLANK"
   }, "here (mobile)"), ".")), /* @__PURE__ */ React.createElement(RichText, null, /* @__PURE__ */ React.createElement(Heading, null, "Usability Testing"), /* @__PURE__ */ React.createElement("p", null, "For this project, I conducted a single-round usability study which focused on improving user experience on both desktop and mobile. I spoke with four respondents of varying ages and genders in a moderated usability test, asking them to walk me through choosing and purchasing a flower arrangement. By conducting this study in the low fidelity phase of prototyping, respondents were able to better focus on structure and flow without being distracted by colors, type, or iconography."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "Digital affinity map for usability testing",
     src: AffinityMap
   }), /* @__PURE__ */ React.createElement("p", null, "Once I implemented the suggestions gleaned from my usability study, I felt confident in the foundation of my desktop and mobile experiences and moved on to making UI decisions.")), /* @__PURE__ */ React.createElement(RichText, null, /* @__PURE__ */ React.createElement(Heading, null, "Visual Design"), /* @__PURE__ */ React.createElement("p", null, "I knew I wanted the site to visually and tonally reflect the products I envisioned on it: contemporary and left-of-center, but not self-important or snobby. During the research phase of my work, I had conducted a competitive audit of some of the main players in the online floral arrangements market. Aesthetically speaking, I noticed a pattern of identities that were either cold, stiff, and modern or messy and unattractive in an attempt to look fun. These two polar extremes defined the baseline of what I would like to avoid."), /* @__PURE__ */ React.createElement("p", null, "While honoring the clean and minimal screen structures I built in the low fidelity stage, I offset any clinical vibes that sparse page structures at times can generate by choosing a fun, fluid typeface for headlines and a pastel mesh gradient to breathe life into heroes and other content containers."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "Mockup of four high fidelity screens of desktop app",
     src: Hifi
   }), /* @__PURE__ */ React.createElement("p", null, "Additionally, I designed a simple and friendly graphic logomark and custom cart icons. Where a wordmark can feel traditional, lending a cute mascot to this brand through its logo inspires a feeling of whimsy."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "Mockup of LFDM logo on a shopfront sign",
     src: Logo
   }), /* @__PURE__ */ React.createElement("p", null, "Similarly, the cart begins as an empty vase and is filled with a single blooming flower when the user adds a product to their cart. This aberration from traditional cart iconography invites the user to have fun and enjoy their time."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "Enlarged copies of custom cart icons in empty and full variants (empty vase, vase with flower)",
     src: Cart
   }), /* @__PURE__ */ React.createElement("p", null, "Check out my hi-fi prototype ", /* @__PURE__ */ React.createElement("a", {
     href: "https://xd.adobe.com/view/e99ac259-83d4-4931-958a-e829eac24d55-bcc9/",
@@ -63,7 +63,7 @@ const LesFleursDeMars = () => {
     href: "https://xd.adobe.com/view/84e0afe6-3f49-412b-ba45-b5a09a4258f9-d1b3/",
     target: "_BLANK"
   }, "here (mobile)"), "."), /* @__PURE__ */ React.createElement("img", {
-    alt: "",
+    alt: "Mocks of eight desktop screens of app",
     src: Hifi2
   })), /* @__PURE__ */ React.createElement(RichText, null, /* @__PURE__ */ React.createElement(Heading, null, "Conclusion"), /* @__PURE__ */ React.createElement("p", null, "There are a few specific features that I would like to bring attention to, as they are perhaps easily overlooked in my mocks but play a significant role in resolving some of the main user challenges outlined at the beginning of this case study."), /* @__PURE__ */ React.createElement(PinkBlock, null, /* @__PURE__ */ React.createElement("h3", null, "Equitable Design for Diverse Budgets"), /* @__PURE__ */ React.createElement("p", null, "Unlike most floral arrangement sites, this one establishes user budget as a required query parameter. Not only is attention paid to offering a catalog of products ranging in price from under $25 to over $200, but a user will only see products specific to the budget they define. This will reduce a feeling of longing for out-of-budget gifts that users may experience when forced to refine the price range once already on the product result grid.")), /* @__PURE__ */ React.createElement(PinkBlock, null, /* @__PURE__ */ React.createElement("h3", null, "Feeling of Diminishing Options"), /* @__PURE__ */ React.createElement("p", null, "In the flow where users choose their desired delivery date, zip code, and budgetary constraints, no results are displayed until all query parameters have been collected. This way, it doesn't feel like they have 75 options initially and only 12 in their price range for the date and location requested, but rather that a list of results are built as they give the tool more data to work with.")), /* @__PURE__ */ React.createElement(PinkBlock, null, /* @__PURE__ */ React.createElement("h3", null, "Product Categorization Feels Arbitrary"), /* @__PURE__ */ React.createElement("p", null, "The only two filters on the product grid page are color and type. A user can look only at flowers, elect to shop bath and body options, or filter for only blue gifts. However, they are given the agency to decide which product feels right for their unique needs without predetermined categorization.")), /* @__PURE__ */ React.createElement(PinkBlock, null, /* @__PURE__ */ React.createElement("h3", null, "Access Limited by Turnaround Time"), /* @__PURE__ */ React.createElement("p", null, "I love the idea of instant flower delivery, but how could such a thing be achieved? I was inspired heavily by  ", /* @__PURE__ */ React.createElement("a", {
     target: "_BLANK",

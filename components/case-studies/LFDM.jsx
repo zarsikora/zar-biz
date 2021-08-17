@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 //Assets
 import Persona1 from "./../../img/case-studies/lfdm/user-persona-1.png";
-import MobilePersona1 from "./../../img/case-studies/tokyo-bikes/persona-mobile-1.png";
-import MobilePersona2 from "./../../img/case-studies/tokyo-bikes/persona-mobile-2.png";
+import MobilePersona1 from "./../../img/case-studies/lfdm/persona-mobile-1.png";
+import MobilePersona2 from "./../../img/case-studies/lfdm/persona-mobile-2.png";
 import Persona2 from "./../../img/case-studies/lfdm/user-persona-2.png";
 import RoughWiresGif from "./../../img/case-studies/lfdm/rough-wires.gif";
 import PolishedDraft from "./../../img/case-studies/lfdm/polished-draft.png";
@@ -120,14 +120,14 @@ const LesFleursDeMars = () => {
                         I listed the elements that would need to be present and then began the process of iterating through possible configurations of these elements.
                     </p>
 
-                    <img alt="" src={RoughWiresGif} />
+                    <img alt="Speedpaint of rough wires for product single design" src={RoughWiresGif} />
 
                     <p>
                         I then combined my favorite parts of each configuration into a polished draft. Here's an example for the 
                         product display page, above the fold.
                     </p>
 
-                    <img alt="" src={PolishedDraft} />
+                    <img alt="Polished wireframe for the product single page" src={PolishedDraft} />
 
                     <p>I was clearly drinking a lot of coffee this day because my lines are incredibly wiggly.</p>
                 </RichText>
@@ -141,7 +141,7 @@ const LesFleursDeMars = () => {
                         mobile configurations of each screen.
                     </p>
 
-                    <img alt="" src={LofiPrototypes} />
+                    <img alt="A mockup of four low fidelity desktop wireframe screens" src={LofiPrototypes} />
 
                     <p>You can try out my low fidelity prototype <a href="https://xd.adobe.com/view/f746f5ea-f154-4b25-acf4-3d8c9ff2c36d-a215/" target="_BLANK">here (desktop)</a> and <a href="https://xd.adobe.com/view/e1407f1b-4738-4183-83fa-47edd35612de-b413/" target="_BLANK">here (mobile)</a>.</p>
                 </RichText>
@@ -154,7 +154,7 @@ const LesFleursDeMars = () => {
                         distracted by colors, type, or iconography.
                     </p>
 
-                    <img alt="" src={AffinityMap} />
+                    <img alt="Digital affinity map for usability testing" src={AffinityMap} />
 
                     <p>
                         Once I implemented the suggestions gleaned from my usability study, I felt confident in the foundation of my desktop and mobile experiences and moved on to making UI decisions.
@@ -175,24 +175,24 @@ const LesFleursDeMars = () => {
                         by choosing a fun, fluid typeface for headlines and a pastel mesh gradient to breathe life into heroes and other content containers.
                     </p>
 
-                    <img alt="" src={Hifi} />
+                    <img alt="Mockup of four high fidelity screens of desktop app" src={Hifi} />
 
                     <p>
                         Additionally, I designed a simple and friendly graphic logomark and custom cart icons. Where a wordmark can feel traditional, lending a cute mascot to this brand through its logo inspires
                         a feeling of whimsy. 
                     </p>
 
-                    <img alt="" src={Logo} />
+                    <img alt="Mockup of LFDM logo on a shopfront sign" src={Logo} />
 
                     <p>Similarly, the cart begins as an empty vase and is filled with a single blooming flower when the user adds a product to their cart. This aberration from traditional
                         cart iconography invites the user to have fun and enjoy their time.
                     </p>
 
-                    <img alt="" src={Cart} />
+                    <img alt="Enlarged copies of custom cart icons in empty and full variants (empty vase, vase with flower)" src={Cart} />
 
                     <p>Check out my hi-fi prototype <a href="https://xd.adobe.com/view/e99ac259-83d4-4931-958a-e829eac24d55-bcc9/" target="_BLANK">here (desktop)</a> and <a href="https://xd.adobe.com/view/84e0afe6-3f49-412b-ba45-b5a09a4258f9-d1b3/" target="_BLANK">here (mobile)</a>.</p>
 
-                    <img alt="" src={Hifi2} />
+                    <img alt="Mocks of eight desktop screens of app" src={Hifi2} />
 
                 </RichText>
 

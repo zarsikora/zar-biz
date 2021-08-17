@@ -1,0 +1,1 @@
+export default "/img/case-studies/lfdm/persona-mobile-2.png";

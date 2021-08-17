@@ -17,7 +17,7 @@ const HomePage = () => {
                 <div>
                     <Jumbotron text="HOWDY" color="#fff" opacity="1" />
                     <ShaderImage img={Hamburglar} alt="Image description: Vintage image of the Hamburglar being disrupted by WebGL shaders" />
-                    <SubHeader>I'm Zar, a designer and creative developer with a passion for equitable design, accessibility, and spicy aesthetics.</SubHeader>
+                    <SubHeader>I'm Zar, a designer and creative technologist with a passion for equitable design, accessibility, and spicy aesthetics.</SubHeader>
 
                     <CallToAction>
                         <Link to="/work" aria-label="View my work">
