@@ -9,6 +9,7 @@ import WorkPage from "./pages/WorkPage.js";
 import ContactPage from "./pages/ContactPage.js";
 import PlaygroundPage from "./pages/PlaygroundPage.js";
 import TokyoBikes from "./case-studies/TokyoBikes.js";
+import LesFleursDeMars from "./case-studies/LFDM.js";
 import AudioButton from "./AudioButton.js";
 import Sprite from "./Sprite.js";
 import MainNav from "./MainNav.js";
@@ -46,7 +47,9 @@ const App = () => {
     path: "/playground"
   }, /* @__PURE__ */ React.createElement(PlaygroundPage, null)), /* @__PURE__ */ React.createElement(Route, {
     path: "/tokyo-bikes"
-  }, /* @__PURE__ */ React.createElement(TokyoBikes, null)))))));
+  }, /* @__PURE__ */ React.createElement(TokyoBikes, null)), /* @__PURE__ */ React.createElement(Route, {
+    path: "/lfdm"
+  }, /* @__PURE__ */ React.createElement(LesFleursDeMars, null)))))));
 };
 export default App;
 const dialogueObj = {

@@ -78,8 +78,8 @@ const TokyoBikes = () => {
                         After transcribing their words, I was able to convert what I learned into individual empathy maps. Here is an example: 
                     </p>
 
-                    <MobileImg alt="" src={AEmpathyMobile} />
-                    <DesktopImg alt="" src={AEmpathy} />
+                    <MobileImg alt="Empathy map for user A. - mobile version" src={AEmpathyMobile} />
+                    <DesktopImg alt="Empathy map for user A. - desktop version" src={AEmpathy} />
 
                     <p>From this research, 3 consistent pain points regarding digital experiences for cyclists emerged:</p>
 
@@ -116,27 +116,27 @@ const TokyoBikes = () => {
                         personas, I was able to focus on a few concentrated areas of user need and be sure I fulfilled those needs well.
                     </p>
 
-                    <MobileImg alt="" src={MobilePersona1} />
-                    <MobileImg alt="" src={MobilePersona2} />
-                    <DesktopImg alt="" src={Persona1} />
-                    <DesktopImg alt="" src={Persona2} />
+                    <MobileImg alt="User persona for Sam Trieu - mobile version" src={MobilePersona1} />
+                    <MobileImg alt="User persona for Ellie Clark - mobile version" src={MobilePersona2} />
+                    <DesktopImg alt="User persona for Sam Trieu - desktop version" src={Persona1} />
+                    <DesktopImg alt="User persona for Ellie Clark - desktop version" src={Persona2} />
                 </RichText>
 
                 <RichText className="desktopOnly">
                     <Heading>Craft the Main User Journey</Heading>
                     <p>With main user needs in mind, I mapped out an initial user flow that started at product research and ended with purchase confirmation.</p>
-                    <img alt="" src={UserFlow} />
+                    <img alt="Research and shopping user flow" src={UserFlow} />
                 </RichText>
 
                 <RichText>
                     <Heading>Paper Wires</Heading>
                     <p>Working iteratively through every screen on the app, I brainstormed five possible configurations of data...</p>
 
-                    <img alt="" src={RoughWiresGif} />
+                    <img alt="Speedpaint of five rough wires for home page design" src={RoughWiresGif} />
 
                     <p>...then combined my favorite parts of each configuration into a polished draft.</p>
 
-                    <img alt="" src={PolishedDrafts} />
+                    <img alt="Polished wireframes for each main app screen" src={PolishedDrafts} />
                 </RichText>
 
                 <RichText>
@@ -146,7 +146,7 @@ const TokyoBikes = () => {
                         With initial page configuration and user flows sorted, it was time for user feedback. I digitized my polished drafts in Figma and built a low-fidelity prototype.
                     </p>
 
-                    <img alt="" src={LofiPrototypes} />
+                    <img alt="A mockup of five low fidelity wireframe screens" src={LofiPrototypes} />
 
                     <p>You can try out my low fidelity prototype <a href="https://www.figma.com/proto/7DZjYe1c27smB9w6BJPpdk/Tokyo-Bikes-Digital-Wires?node-id=5%3A20&scaling=scale-down&page-id=0%3A1&starting-point-node-id=5%3A20" target="_BLANK">here</a>.</p>
                 </RichText>
@@ -155,11 +155,11 @@ const TokyoBikes = () => {
                     <Heading>Usability Testing</Heading>
                     <p>I conducted two rounds of usability studies, both with five respondents of varying ages and genders. The first round focused on my low-fi prototype and consisted of a moderated usability study followed by a system usability scale.</p>
 
-                    <img alt="" src={AffinityMap} />
+                    <img alt="Digital affinity map for round 1 of usability testing" src={AffinityMap} />
 
                     <p>Once the first round of suggestions were implemented, I refined the mocks to include brand colors, visual assets, and type hierarchy...</p>
 
-                    <img alt="" src={Hifi} />
+                    <img alt="Mockup of six high fidelity screens of mobile app" src={Hifi} />
 
                     <p>...and got even more feedback! Check out my hi-fi prototype <a href="https://www.figma.com/proto/7DZjYe1c27smB9w6BJPpdk/Tokyo-Bikes-Digital-Wires?node-id=127%3A3&scaling=scale-down&page-id=127%3A2&starting-point-node-id=127%3A3&show-proto-sidebar=1" target="_BLANK">here</a>.</p>
 
@@ -198,8 +198,8 @@ const TokyoBikes = () => {
                 <RichText>
                     <Heading>Visual Design</Heading>
 
-                    <img alt="" src={StickerSheet} />
-                    <img alt="" src={FinalMock} />
+                    <img alt="Sticker sheet of main design elements used in app" src={StickerSheet} />
+                    <img alt="Mockup of home page of app on an iphone" src={FinalMock} />
                 </RichText>
 
                 <RichText>

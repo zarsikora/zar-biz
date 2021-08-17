@@ -1,0 +1,1 @@
+export default "/img/case-studies/lfdm/rough-wires.gif";

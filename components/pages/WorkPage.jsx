@@ -164,6 +164,18 @@ const WorkBlock = styled(motion.li)`
 
 const workData = [
     {
+        name: "Les Fleurs de Mars",
+        slug: "lfdm",
+        type: "internal",
+        link: "",
+        bg: "#4e573b",
+        text: "#e1ff64",
+        img: "./../../img/work/lfdm-peek.png",
+        alt: "High fidelity screens for mobile experience",
+        label: "View Les Fleurs de Mars project",
+        tags: "UX Research, UX Design, Prototyping, UI Design, Responsive Design, Graphic Design, Completed"
+    },
+    {
         name: "Tokyo Bikes",
         slug: "tokyo-bikes",
         type: "internal",

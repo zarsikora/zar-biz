@@ -12,6 +12,7 @@ import ContactPage from "./pages/ContactPage";
 import PlaygroundPage from './pages/PlaygroundPage';
 //Case Studies 
 import TokyoBikes from "./case-studies/TokyoBikes";
+import LesFleursDeMars from './case-studies/LFDM';
 //Components
 import AudioButton from './AudioButton';
 import Sprite from './Sprite';
@@ -68,6 +69,9 @@ const App = () => {
                             {/* WORK SINGLE PAGES */}
                             <Route path="/tokyo-bikes">
                                 <TokyoBikes />
+                            </Route>
+                            <Route path="/lfdm">
+                                <LesFleursDeMars />
                             </Route>
                         </Switch>
                     </AnimatePresence>

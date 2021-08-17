@@ -1,0 +1,1 @@
+export default "/img/case-studies/lfdm/lofi-prototypes.png";
