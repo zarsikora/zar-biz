@@ -20,7 +20,6 @@ import MainNav from "./MainNav";
 
 
 const App = () => {
-    const [speechBoxDialogue, setSpeechBoxDialogue] = useState(dialogueObj.intro);
     const [isNavActive, setIsNavActive] = useState(false);
 
     const handleMainNavRender = () => {
@@ -34,7 +33,7 @@ const App = () => {
     }
 
     return (
-        <>
+        <div id="app-wrapper" className={isNavActive ? "nav-active" : ""}>
             <WebfontLoader config={webFontConfig}>
                 <Router>
                     <GlobalStyle />
@@ -77,28 +76,11 @@ const App = () => {
                     </AnimatePresence>
                 </Router>
             </WebfontLoader>
-        </>
+        </div>
     );
 }
 
 export default App;
-
-const dialogueObj = {
-    intro: {
-        lines: [
-            "Hi, I'm Zar -- Welcome to my little pocket of the digital hellscape.",
-            "<span class='small'>Well technically I'm a graphical representation, but you get my meaning...</span>",
-            "What can I do ya for?"
-        ],
-    },
-    work: {
-        lines: [
-            "Here is a secondary bit of dialogue!",
-        ]
-    }
-}
-
-
 
 const GlobalStyle = createGlobalStyle`
 @font-face {
@@ -131,6 +113,14 @@ body {
     background-color: #141515;
     color: #fff;
     position: relative;
+}
+
+//fix height when nav is open
+#app-wrapper {
+    &.nav-active {
+        height: 100vh;
+        overflow: hidden;
+    }
 }
 
 h1 {

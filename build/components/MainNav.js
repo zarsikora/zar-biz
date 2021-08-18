@@ -97,7 +97,7 @@ const WaveIn = styled.svg`
     }
 `;
 const NavPane = styled(motion.div)`
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;

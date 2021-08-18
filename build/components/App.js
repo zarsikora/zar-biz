@@ -14,7 +14,6 @@ import AudioButton from "./AudioButton.js";
 import Sprite from "./Sprite.js";
 import MainNav from "./MainNav.js";
 const App = () => {
-  const [speechBoxDialogue, setSpeechBoxDialogue] = useState(dialogueObj.intro);
   const [isNavActive, setIsNavActive] = useState(false);
   const handleMainNavRender = () => {
     setIsNavActive(!isNavActive);
@@ -24,7 +23,10 @@ const App = () => {
       families: ["Detechno", "Roboto"]
     }
   };
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(WebfontLoader, {
+  return /* @__PURE__ */ React.createElement("div", {
+    id: "app-wrapper",
+    className: isNavActive ? "nav-active" : ""
+  }, /* @__PURE__ */ React.createElement(WebfontLoader, {
     config: webFontConfig
   }, /* @__PURE__ */ React.createElement(Router, null, /* @__PURE__ */ React.createElement(GlobalStyle, null), /* @__PURE__ */ React.createElement(AudioButton, null), /* @__PURE__ */ React.createElement(Sprite, {
     handleMainNavRender,
@@ -52,20 +54,6 @@ const App = () => {
   }, /* @__PURE__ */ React.createElement(LesFleursDeMars, null)))))));
 };
 export default App;
-const dialogueObj = {
-  intro: {
-    lines: [
-      "Hi, I'm Zar -- Welcome to my little pocket of the digital hellscape.",
-      "<span class='small'>Well technically I'm a graphical representation, but you get my meaning...</span>",
-      "What can I do ya for?"
-    ]
-  },
-  work: {
-    lines: [
-      "Here is a secondary bit of dialogue!"
-    ]
-  }
-};
 const GlobalStyle = createGlobalStyle`
 @font-face {
     font-family: 'Detechno';
@@ -97,6 +85,14 @@ body {
     background-color: #141515;
     color: #fff;
     position: relative;
+}
+
+//fix height when nav is open
+#app-wrapper {
+    &.nav-active {
+        height: 100vh;
+        overflow: hidden;
+    }
 }
 
 h1 {
