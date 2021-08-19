@@ -10,6 +10,7 @@ import ContactPage from "./pages/ContactPage.js";
 import PlaygroundPage from "./pages/PlaygroundPage.js";
 import TokyoBikes from "./case-studies/TokyoBikes.js";
 import LesFleursDeMars from "./case-studies/LFDM.js";
+import BrutalistDunks from "./case-studies/BrutalistDunks.js";
 import AudioButton from "./AudioButton.js";
 import Sprite from "./Sprite.js";
 import MainNav from "./MainNav.js";
@@ -51,7 +52,9 @@ const App = () => {
     path: "/tokyo-bikes"
   }, /* @__PURE__ */ React.createElement(TokyoBikes, null)), /* @__PURE__ */ React.createElement(Route, {
     path: "/lfdm"
-  }, /* @__PURE__ */ React.createElement(LesFleursDeMars, null)))))));
+  }, /* @__PURE__ */ React.createElement(LesFleursDeMars, null)), /* @__PURE__ */ React.createElement(Route, {
+    path: "/brutalist-dunks"
+  }, /* @__PURE__ */ React.createElement(BrutalistDunks, null)))))));
 };
 export default App;
 const GlobalStyle = createGlobalStyle`

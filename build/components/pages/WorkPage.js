@@ -178,6 +178,18 @@ const workData = [
     tags: "UX Research, UX Design, Prototyping, User Testing, UI Design, Completed"
   },
   {
+    name: "Brutalist Dunks",
+    slug: "brutalist-dunks",
+    type: "internal",
+    link: "",
+    bg: "#ED5AAB",
+    text: "#000",
+    img: "./../../img/work/bd-peek.png",
+    alt: "Close up of repeating brutalist Dunkin design",
+    label: "View Brutalist Dunks Project",
+    tags: "Graphic Design, Poster Design, Package Design, Branding, For Fun"
+  },
+  {
     name: "Alarad",
     type: "external",
     link: "https://www.alaradcapital.com/",
@@ -195,7 +207,7 @@ const workData = [
     bg: "#FCE1E6",
     text: "#18084d",
     img: "./../../img/work/ag-peek.png",
-    alt: "",
+    alt: "Close up of hand wearing Automic Gold products",
     label: "View Automic Gold project",
     tags: "Development, Site Maintenance, Accessibility, Performance, Shopify, Ongoing"
   },

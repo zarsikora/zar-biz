@@ -13,6 +13,7 @@ import PlaygroundPage from './pages/PlaygroundPage';
 //Case Studies 
 import TokyoBikes from "./case-studies/TokyoBikes";
 import LesFleursDeMars from './case-studies/LFDM';
+import BrutalistDunks from './case-studies/BrutalistDunks';
 //Components
 import AudioButton from './AudioButton';
 import Sprite from './Sprite';
@@ -71,6 +72,9 @@ const App = () => {
                             </Route>
                             <Route path="/lfdm">
                                 <LesFleursDeMars />
+                            </Route>
+                            <Route path="/brutalist-dunks">
+                                <BrutalistDunks />
                             </Route>
                         </Switch>
                     </AnimatePresence>

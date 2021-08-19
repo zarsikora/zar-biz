@@ -1,0 +1,1 @@
+export default "/img/case-studies/brutalist-dunks/bd-mock-1.png";
