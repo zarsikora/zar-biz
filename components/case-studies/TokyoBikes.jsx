@@ -3,18 +3,18 @@ import styled from 'styled-components';
 //Assets
 import AEmpathy from "./../../img/case-studies/tokyo-bikes/a-empathy.png";
 import AEmpathyMobile from "./../../img/case-studies/tokyo-bikes/AEmpathy-mobile.png";
-import Persona1 from "./../../img/case-studies/tokyo-bikes/user-persona-1.png";
-import MobilePersona1 from "./../../img/case-studies/tokyo-bikes/persona-mobile-1.png";
-import MobilePersona2 from "./../../img/case-studies/tokyo-bikes/persona-mobile-2.png";
-import Persona2 from "./../../img/case-studies/tokyo-bikes/user-persona-2.png";
+import Persona1 from "./../../img/case-studies/tokyo-bikes/user-persona-1-min.png";
+import MobilePersona1 from "./../../img/case-studies/tokyo-bikes/persona-mobile-1-min.png";
+import MobilePersona2 from "./../../img/case-studies/tokyo-bikes/persona-mobile-2-min.png";
+import Persona2 from "./../../img/case-studies/tokyo-bikes/user-persona-2-min.png";
 import UserFlow from "./../../img/case-studies/tokyo-bikes/user-flow.png";
 import RoughWiresGif from "./../../img/case-studies/tokyo-bikes/rough-wires.gif";
-import PolishedDrafts from "./../../img/case-studies/tokyo-bikes/polished-drafts.png";
-import LofiPrototypes from "./../../img/case-studies/tokyo-bikes/lofi-prototypes.png";
+import PolishedDrafts from "./../../img/case-studies/tokyo-bikes/polished-drafts-min.png";
+import LofiPrototypes from "./../../img/case-studies/tokyo-bikes/lofi-prototypes-min.png";
 import AffinityMap from "./../../img/case-studies/tokyo-bikes/affinity-map.png";
-import Hifi from "./../../img/case-studies/tokyo-bikes/hifi-proto.png";
-import StickerSheet from "./../../img/case-studies/tokyo-bikes/sticker-sheet.png"
-import FinalMock from "./../../img/case-studies/tokyo-bikes/final-mock-1.png";
+import Hifi from "./../../img/case-studies/tokyo-bikes/hifi-proto-min.png";
+import StickerSheet from "./../../img/case-studies/tokyo-bikes/sticker-sheet-min.png"
+import FinalMock from "./../../img/case-studies/tokyo-bikes/final-mock-1-min.png";
 
 
 const TokyoBikes = () => {
