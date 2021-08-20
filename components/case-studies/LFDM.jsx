@@ -6,13 +6,13 @@ import MobilePersona1 from "./../../img/case-studies/lfdm/persona-mobile-1.png";
 import MobilePersona2 from "./../../img/case-studies/lfdm/persona-mobile-2.png";
 import Persona2 from "./../../img/case-studies/lfdm/user-persona-2.png";
 import RoughWiresGif from "./../../img/case-studies/lfdm/rough-wires.gif";
-import PolishedDraft from "./../../img/case-studies/lfdm/polished-draft.png";
-import LofiPrototypes from "./../../img/case-studies/lfdm/lofi-prototypes.png";
-import AffinityMap from "./../../img/case-studies/lfdm/affinity-map.png";
-import Logo from "./../../img/case-studies/lfdm/shop-sign.png";
-import Cart from "./../../img/case-studies/lfdm/cart-icons.png";
-import Hifi from "./../../img/case-studies/lfdm/final-desktop-screens.png";
-import Hifi2 from "./../../img/case-studies/lfdm/laptop-screens.png";
+import PolishedDraft from "./../../img/case-studies/lfdm/polished-draft-min.png";
+import LofiPrototypes from "./../../img/case-studies/lfdm/lofi-prototypes-min.png";
+import AffinityMap from "./../../img/case-studies/lfdm/affinity-map-min.png";
+import Logo from "./../../img/case-studies/lfdm/shop-sign-min.png";
+import Cart from "./../../img/case-studies/lfdm/cart-icons-min.png";
+import Hifi from "./../../img/case-studies/lfdm/final-desktop-screens-min.png";
+import Hifi2 from "./../../img/case-studies/lfdm/laptop-screens-min.png";
 
 
 const LesFleursDeMars = () => {
