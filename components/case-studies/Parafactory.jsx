@@ -45,8 +45,7 @@ const Parafactory = () => {
                 <RichText>
                     <Heading>Project Vision</Heading>
                     <p>
-                        The final prompt for my Google UX design certificate was to design a native mobile app and corresponding responsive web application
-                        for social good. Coincidentally, I'd had an idea in the works for a while which fit the theme.
+                        I was tasked with designing a native mobile app and corresponding responsive web application for social good. Coincidentally, I'd had an idea in the works for a while which fit the theme.
                     </p>
 
                     <p>
@@ -123,8 +122,8 @@ const Parafactory = () => {
                         The pre-existing models I found presented a few problems:
                     </p>
 
-                    <DesktopImg alt="" src={DesktopWhiskey} />
-                    <MobileImg alt="a pastel four-quadrant flavor map for single-malt scotch" src={WhiskeyMap} />
+                    <DesktopImg alt="a pastel four-quadrant flavor map for single-malt scotch - desktop version" src={DesktopWhiskey} />
+                    <MobileImg alt="a pastel four-quadrant flavor map for single-malt scotch - mobile version" src={WhiskeyMap} />
 
                     <Attribution target="_BLANK" href="https://vinepair.com/articles/single-malt-scotch-whisky-flavor-map-infographic/">Courtesy of Vinepair</Attribution>
 
@@ -133,8 +132,8 @@ const Parafactory = () => {
                         wants to explore a broad variety of food types. 
                     </p>
 
-                    <DesktopImg alt="" src={DesktopWheel} />
-                    <MobileImg alt="coffee flavor wheel" src={FlavorWheel} />
+                    <DesktopImg alt="coffee flavor wheel - desktop version" src={DesktopWheel} />
+                    <MobileImg alt="coffee flavor wheel - mobile version" src={FlavorWheel} />
 
                     <Attribution target="_BLANK" href="https://www.scanews.coffee/wp-content/uploads/2016/01/SCAA_FlavorWheel.01.18.15.jpg">Courtesy of the Special Coffee Association of America</Attribution>
 
@@ -147,8 +146,8 @@ const Parafactory = () => {
                         After much thought and collaboration, I decided to move forward with displaying the data in two ways: 
                     </p>
 
-                    <DesktopImg alt=""src={DesktopRadar} />
-                    <MobileImg alt="radar chart of a user's perception of the flavor profile of a lemon vs a control" src={Radar} />
+                    <DesktopImg alt="radar chart of a user's perception of the flavor profile of a lemon vs a control - desktop version"src={DesktopRadar} />
+                    <MobileImg alt="radar chart of a user's perception of the flavor profile of a lemon vs a control - mobile version" src={Radar} />
 
                     <p>
                         First, a radar chart will allow for a clear visual representation of multiple taste nodes coming together into one unique flavor profile shape. Our app will limit entries to
@@ -166,13 +165,13 @@ const Parafactory = () => {
                         This data alone doesn't show everything we want, though. Maybe a user’s ability to taste the sweet notes of a food specifically is improving over time. I wanted a way to see that as well.
                     </p>
 
-                    <DesktopImg alt="" src={DesktopLine} />
-                    <MobileImg alt="" src={Line} />
+                    <DesktopImg alt="line chart of a user's perception of the sweet notes of lemon over time - desktop version" src={DesktopLine} />
+                    <MobileImg alt="line chart of a user's perception of the sweet notes of lemon over time - mobile version" src={Line} />
 
                     <p>
                         For this, a line graph with a single flavor’s numerical ranking on the Y axis and dates of entry on the X axis tracks whether a user is getting closer or farther from the control data.
                         In this example, on July 1st the user ranked the sweet notes of a lemon at 7 vs the control's ranking of 3, but by late August their perception of the sweet node dropped to 4, only 1 point
-                        away from the control. Their taste is evolving in a way that suggests olfactory nerve regeneration.
+                        away from the control. Their taste is evolving in a way that suggests healthy olfactory nerve regeneration.
                     </p>
 
                     <p>
@@ -192,11 +191,11 @@ const Parafactory = () => {
                     <p>
                         I split the task of digital wireframing and prototyping into two parts: the native mobile app and web experience. I envisioned the native mobile app
                         being specifically for account holders creating and keeping track of entries, while the web app would have both a login portal for registered users and 
-                        opportunities for the public to explore visualization of aggregrate user data.
+                        opportunities for the public to explore visualization of aggregate user data.
                     </p>
 
-                    <DesktopImg alt="" src={DashMockDesktop} />
-                    <MobileImg alt="" src={DashMock} />
+                    <DesktopImg alt="rough digital wires for the dashboard screen of the native app, web app, and mobile web app - desktop" src={DashMockDesktop} />
+                    <MobileImg alt="rough digital wires for the dashboard screen of the native app, web app, and mobile web app - mobile" src={DashMock} />
 
                     <p>You can try out my lo-fi prototypes <a target="_BLANK" href="https://xd.adobe.com/view/5d9ef4b0-0603-4450-8844-125a5bfac9c9-08cd/">here (mobile app)</a>, <a target="_BLANK" href="https://xd.adobe.com/view/a0a14b3c-9e12-4261-9721-6a96beb96471-f5f2/">here (mobile web)</a>, and <a target="_BLANK" href="https://xd.adobe.com/view/d5b9491d-ee1e-42c5-9c26-e2878ff39cb5-80ea/">here (desktop web)</a>!</p>
                 </RichText>
@@ -243,15 +242,15 @@ const Parafactory = () => {
                         background overlays for a bit of spice and to reinforce the theme of distorted perception. 
                     </p>
 
-                    <img alt="" src={Welcome} />
+                    <img alt="welcome screen of the parafactory desktop web application" src={Welcome} />
 
-                    <img alt="" src={Hifi3} /> 
+                    <img alt="desktop mockups of the profile, entry single, food single, and new entry screens" src={Hifi3} /> 
 
-                    <img alt="" src={Hifi2} /> 
+                    <img alt="mobile mockups of the profile, entry single, and node single screens" src={Hifi2} /> 
 
                     <p>Check out my hi-fi prototypes <a target="_BLANK" href="https://xd.adobe.com/view/df79fd1e-86db-4d5d-bd5d-ce6e12cda110-8a2a/">here (mobile app)</a>, <a target="_BLANK" href="https://xd.adobe.com/view/07aab0ae-2337-4f75-9972-e0fa3248ad9c-52f9/">here (mobile web)</a>, and <a target="_BLANK" href="https://xd.adobe.com/view/55ff22cb-35bc-4616-aca8-360b502e39de-00ac/">here (desktop web)</a>.</p>
 
-                    <img alt="" src={Hifi} />
+                    <img alt="desktop, tablet, and mobile mocks of the entry single screen" src={Hifi} />
 
                 </RichText>
 
@@ -301,7 +300,7 @@ const Parafactory = () => {
 
                     <Heading>TLDR:</Heading>
 
-                    <img alt="" src={Tldr} />
+                    <img alt="screenshot of text message with conspiracy theory meme and text 'IM LIKE WE CAN MAKE TASTE INTO A SHAPE USING NUMBERS'" src={Tldr} />
 
                     <p>
                         I will continue to update this case study as I move forward with the build process :)

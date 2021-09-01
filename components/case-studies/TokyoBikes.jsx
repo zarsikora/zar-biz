@@ -39,9 +39,8 @@ const TokyoBikes = () => {
                     <Heading>Project Vision</Heading>
                     <p>
                         Over the course of the pandemic, the concept of using design and technology in an attempt to substitute face-to-face human
-                        interaction has been on many minds, mine included. After pulling a prompt to create an app for a bike shop in Tokyo for the
-                        Google UX Design certification, I envisioned a mobile application that could substitute for an in-person experience
-                        at a cycle shop, delivering familiarity and expertise to users from a distance.
+                        interaction has been on many minds, mine included. After pulling a prompt to create an app for a bike shop in Tokyo, I envisioned 
+                        a mobile application that could substitute for an in-person experience at a cycle shop, delivering familiarity and expertise to users from a distance.
                     </p>
                 </RichText>
 

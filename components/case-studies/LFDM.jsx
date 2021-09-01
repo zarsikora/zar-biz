@@ -36,7 +36,7 @@ const LesFleursDeMars = () => {
                 <RichText>
                     <Heading>Project Vision</Heading>
                     <p>
-                        For the second prompt of the Google UX Design Certification, I was tasked with designing a shopping flow
+                        I was tasked with designing a shopping flow
                         specifically for flower arrangements. I'm not someone who orders many flowers, but my impression has always
                         been that floral arrangements are incredibly traditional in their styling, and that a user typically sacrifices
                         aesthetics for economic accessibility or the other way around. I wanted to challenge the notion that
