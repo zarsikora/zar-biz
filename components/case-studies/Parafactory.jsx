@@ -250,6 +250,8 @@ const Parafactory = () => {
 
                     <p>Check out my hi-fi prototypes <a target="_BLANK" href="https://xd.adobe.com/view/df79fd1e-86db-4d5d-bd5d-ce6e12cda110-8a2a/">here (mobile app)</a>, <a target="_BLANK" href="https://xd.adobe.com/view/07aab0ae-2337-4f75-9972-e0fa3248ad9c-52f9/">here (mobile web)</a>, and <a target="_BLANK" href="https://xd.adobe.com/view/55ff22cb-35bc-4616-aca8-360b502e39de-00ac/">here (desktop web)</a>.</p>
 
+                    <p>Note: I am actually in the process of moving my high fidelity prototypes over to Figma - these links will update soon.</p>
+                    
                     <img alt="desktop, tablet, and mobile mocks of the entry single screen" src={Hifi} />
 
                 </RichText>
