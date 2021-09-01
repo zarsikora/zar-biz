@@ -1,0 +1,1 @@
+export default "/img/case-studies/lfdm/affinity-map-min.png";

@@ -1,0 +1,1 @@
+export default "/img/case-studies/parafactory/phone-screens-web.png";

@@ -47,7 +47,7 @@ const Hero = styled.div`
     text-align: center;
 
     h1 {
-        font-size: 8rem;
+        font-size: 7rem;
         @media(min-width: 768px){
             font-size: 10rem;
         }

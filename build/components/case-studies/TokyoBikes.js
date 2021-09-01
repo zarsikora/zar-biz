@@ -2,18 +2,18 @@ import React from "../../_snowpack/pkg/react.js";
 import styled from "../../_snowpack/pkg/styled-components.js";
 import AEmpathy from "../../img/case-studies/tokyo-bikes/a-empathy.png.proxy.js";
 import AEmpathyMobile from "../../img/case-studies/tokyo-bikes/AEmpathy-mobile.png.proxy.js";
-import Persona1 from "../../img/case-studies/tokyo-bikes/user-persona-1.png.proxy.js";
-import MobilePersona1 from "../../img/case-studies/tokyo-bikes/persona-mobile-1.png.proxy.js";
-import MobilePersona2 from "../../img/case-studies/tokyo-bikes/persona-mobile-2.png.proxy.js";
-import Persona2 from "../../img/case-studies/tokyo-bikes/user-persona-2.png.proxy.js";
+import Persona1 from "../../img/case-studies/tokyo-bikes/user-persona-1-min.png.proxy.js";
+import MobilePersona1 from "../../img/case-studies/tokyo-bikes/persona-mobile-1-min.png.proxy.js";
+import MobilePersona2 from "../../img/case-studies/tokyo-bikes/persona-mobile-2-min.png.proxy.js";
+import Persona2 from "../../img/case-studies/tokyo-bikes/user-persona-2-min.png.proxy.js";
 import UserFlow from "../../img/case-studies/tokyo-bikes/user-flow.png.proxy.js";
 import RoughWiresGif from "../../img/case-studies/tokyo-bikes/rough-wires.gif.proxy.js";
-import PolishedDrafts from "../../img/case-studies/tokyo-bikes/polished-drafts.png.proxy.js";
-import LofiPrototypes from "../../img/case-studies/tokyo-bikes/lofi-prototypes.png.proxy.js";
+import PolishedDrafts from "../../img/case-studies/tokyo-bikes/polished-drafts-min.png.proxy.js";
+import LofiPrototypes from "../../img/case-studies/tokyo-bikes/lofi-prototypes-min.png.proxy.js";
 import AffinityMap from "../../img/case-studies/tokyo-bikes/affinity-map.png.proxy.js";
-import Hifi from "../../img/case-studies/tokyo-bikes/hifi-proto.png.proxy.js";
-import StickerSheet from "../../img/case-studies/tokyo-bikes/sticker-sheet.png.proxy.js";
-import FinalMock from "../../img/case-studies/tokyo-bikes/final-mock-1.png.proxy.js";
+import Hifi from "../../img/case-studies/tokyo-bikes/hifi-proto-min.png.proxy.js";
+import StickerSheet from "../../img/case-studies/tokyo-bikes/sticker-sheet-min.png.proxy.js";
+import FinalMock from "../../img/case-studies/tokyo-bikes/final-mock-1-min.png.proxy.js";
 const TokyoBikes = () => {
   return /* @__PURE__ */ React.createElement(Wrapper, null, /* @__PURE__ */ React.createElement(Hero, null, /* @__PURE__ */ React.createElement(PinkBlock, null, /* @__PURE__ */ React.createElement("h1", null, "Tokyo Bikes")), /* @__PURE__ */ React.createElement(Details, null, /* @__PURE__ */ React.createElement("p", null, "Role: UX designer, UX researcher, graphic designer"), /* @__PURE__ */ React.createElement("p", null, "Status: Complete"), /* @__PURE__ */ React.createElement("p", null, "Duration: June 2021-July 2021"))), /* @__PURE__ */ React.createElement(SlidesCta, {
     target: "BLANK",

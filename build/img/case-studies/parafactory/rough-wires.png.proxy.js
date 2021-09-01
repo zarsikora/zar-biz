@@ -1,0 +1,1 @@
+export default "/img/case-studies/parafactory/rough-wires.png";

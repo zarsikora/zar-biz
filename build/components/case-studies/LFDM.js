@@ -5,13 +5,13 @@ import MobilePersona1 from "../../img/case-studies/lfdm/persona-mobile-1.png.pro
 import MobilePersona2 from "../../img/case-studies/lfdm/persona-mobile-2.png.proxy.js";
 import Persona2 from "../../img/case-studies/lfdm/user-persona-2.png.proxy.js";
 import RoughWiresGif from "../../img/case-studies/lfdm/rough-wires.gif.proxy.js";
-import PolishedDraft from "../../img/case-studies/lfdm/polished-draft.png.proxy.js";
-import LofiPrototypes from "../../img/case-studies/lfdm/lofi-prototypes.png.proxy.js";
-import AffinityMap from "../../img/case-studies/lfdm/affinity-map.png.proxy.js";
-import Logo from "../../img/case-studies/lfdm/shop-sign.png.proxy.js";
-import Cart from "../../img/case-studies/lfdm/cart-icons.png.proxy.js";
-import Hifi from "../../img/case-studies/lfdm/final-desktop-screens.png.proxy.js";
-import Hifi2 from "../../img/case-studies/lfdm/laptop-screens.png.proxy.js";
+import PolishedDraft from "../../img/case-studies/lfdm/polished-draft-min.png.proxy.js";
+import LofiPrototypes from "../../img/case-studies/lfdm/lofi-prototypes-min.png.proxy.js";
+import AffinityMap from "../../img/case-studies/lfdm/affinity-map-min.png.proxy.js";
+import Logo from "../../img/case-studies/lfdm/shop-sign-min.png.proxy.js";
+import Cart from "../../img/case-studies/lfdm/cart-icons-min.png.proxy.js";
+import Hifi from "../../img/case-studies/lfdm/final-desktop-screens-min.png.proxy.js";
+import Hifi2 from "../../img/case-studies/lfdm/laptop-screens-min.png.proxy.js";
 const LesFleursDeMars = () => {
   return /* @__PURE__ */ React.createElement(Wrapper, null, /* @__PURE__ */ React.createElement(Hero, null, /* @__PURE__ */ React.createElement(PinkBlock, null, /* @__PURE__ */ React.createElement("h1", null, "Les Fleurs de Mars")), /* @__PURE__ */ React.createElement(Details, null, /* @__PURE__ */ React.createElement("p", null, "Role: UX designer, UX researcher, graphic designer"), /* @__PURE__ */ React.createElement("p", null, "Status: Complete"), /* @__PURE__ */ React.createElement("p", null, "Duration: August 2021"))), /* @__PURE__ */ React.createElement(SlidesCta, {
     target: "BLANK",

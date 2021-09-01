@@ -1,1 +1,0 @@
-export default "/img/case-studies/lfdm/shop-sign.png";

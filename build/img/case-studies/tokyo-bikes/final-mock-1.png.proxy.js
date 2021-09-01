@@ -1,1 +1,0 @@
-export default "/img/case-studies/tokyo-bikes/final-mock-1.png";

@@ -1,0 +1,1 @@
+export default "/img/case-studies/parafactory/user-persona-1.png";

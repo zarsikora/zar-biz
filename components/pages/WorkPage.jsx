@@ -164,6 +164,18 @@ const WorkBlock = styled(motion.li)`
 
 const workData = [
     {
+        name: "Parafactory",
+        slug: "parafactory",
+        type: "internal",
+        link: "",
+        bg: "#E49B7F",
+        text: "#202020",
+        img: "./../../img/work/parafactory-peek.png",
+        alt: "High fidelity screens for mobile experience",
+        label: "View Parafactory project",
+        tags: "UX Research, UX Design, Prototyping, UI Design, Responsive Design, Data Visualization, Design Complete, Build In Progress"
+    },
+    {
         name: "Les Fleurs de Mars",
         slug: "lfdm",
         type: "internal",

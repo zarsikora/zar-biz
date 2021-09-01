@@ -1,0 +1,1 @@
+export default "/img/case-studies/parafactory/persona-mobile-2.png";

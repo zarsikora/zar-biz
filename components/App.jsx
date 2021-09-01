@@ -14,6 +14,7 @@ import PlaygroundPage from './pages/PlaygroundPage';
 import TokyoBikes from "./case-studies/TokyoBikes";
 import LesFleursDeMars from './case-studies/LFDM';
 import BrutalistDunks from './case-studies/BrutalistDunks';
+import Parafactory from './case-studies/Parafactory';
 //Components
 import AudioButton from './AudioButton';
 import Sprite from './Sprite';
@@ -72,6 +73,9 @@ const App = () => {
                             </Route>
                             <Route path="/lfdm">
                                 <LesFleursDeMars />
+                            </Route>
+                            <Route path="/parafactory">
+                                <Parafactory />
                             </Route>
                             <Route path="/brutalist-dunks">
                                 <BrutalistDunks />

@@ -1,0 +1,1 @@
+export default "/img/case-studies/tokyo-bikes/user-persona-1-min.png";
