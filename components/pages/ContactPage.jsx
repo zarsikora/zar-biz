@@ -139,7 +139,7 @@ const contactData = [
     },
     {
         name: "Resume",
-        link: "./../../files/z-resume-0827.pdf",
+        link: "./../../files/minimal-resume.pdf",
         label: "Download my resume"
     }
 ]
