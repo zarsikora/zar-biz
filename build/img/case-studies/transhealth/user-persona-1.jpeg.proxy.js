@@ -1,0 +1,1 @@
+export default "/img/case-studies/transhealth/user-persona-1.jpeg";

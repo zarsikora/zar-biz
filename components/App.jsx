@@ -15,6 +15,7 @@ import TokyoBikes from "./case-studies/TokyoBikes";
 import LesFleursDeMars from './case-studies/LFDM';
 import BrutalistDunks from './case-studies/BrutalistDunks';
 import Parafactory from './case-studies/Parafactory';
+import TransHealth from './case-studies/TransHealth';
 //Components
 import AudioButton from './AudioButton';
 import Sprite from './Sprite';
@@ -46,9 +47,6 @@ const App = () => {
                     <AnimatePresence>
                         {isNavActive && <MainNav handleMainNavRender={handleMainNavRender} />}
                     </AnimatePresence>
-                    
-                    {/* if route is whereto do this */}
-                    {/* <SpeechBox messages={speechBoxDialogue} /> */}
 
                     <AnimatePresence initial={false} exitBeforeEnter>
                         <Switch>
@@ -76,6 +74,9 @@ const App = () => {
                             </Route>
                             <Route path="/parafactory">
                                 <Parafactory />
+                            </Route>
+                            <Route path ="/transhealth">
+                                <TransHealth />
                             </Route>
                             <Route path="/brutalist-dunks">
                                 <BrutalistDunks />

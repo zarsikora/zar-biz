@@ -154,6 +154,18 @@ const WorkBlock = styled(motion.li)`
 `;
 const workData = [
   {
+    name: "TransHealth",
+    slug: "transhealth",
+    type: "internal",
+    link: "",
+    bg: "#96b0c5",
+    text: "#2a275b",
+    img: "./../../img/work/th-peek.png",
+    alt: "The Transhealth logo",
+    label: "View Transhealth project",
+    tags: "UX Research, UX Design, Development, Accessibility, Wordpress, Completed"
+  },
+  {
     name: "Parafactory",
     slug: "parafactory",
     type: "internal",
@@ -190,6 +202,39 @@ const workData = [
     tags: "UX Research, UX Design, Prototyping, User Testing, UI Design, Completed"
   },
   {
+    name: "Alarad",
+    type: "external",
+    link: "https://www.alaradcapital.com/",
+    bg: "#27331d",
+    text: "#bd8e65",
+    img: "./../../img/work/alarad-peek.png",
+    alt: "Green and gold geometric designs of Alarad brand kit",
+    label: "View Alarad project",
+    tags: "Design, Development, Motion Design, Animation, Wordpress, Completed"
+  },
+  {
+    name: "Automic Gold",
+    type: "external",
+    link: "https://www.automicgold.com/",
+    bg: "#FCE1E6",
+    text: "#18084d",
+    img: "./../../img/work/ag-peek.png",
+    alt: "Close up of hand wearing Automic Gold products",
+    label: "View Automic Gold project",
+    tags: "UX Design, Development, Site Maintenance, Accessibility, Performance, Shopify, Ongoing"
+  },
+  {
+    name: "Steel Root",
+    type: "external",
+    link: "https://steelroot.us/",
+    bg: "#181d40",
+    text: "#01adcb",
+    img: "./../../img/work/sr-peek.png",
+    alt: "Cyborg with glowing eyes",
+    label: "View Steel Root project",
+    tags: "Design, Development, Accessibility, Performance, Wordpress, Completed"
+  },
+  {
     name: "Brutalist Dunks",
     slug: "brutalist-dunks",
     type: "internal",
@@ -202,39 +247,6 @@ const workData = [
     tags: "Graphic Design, Poster Design, Package Design, Branding, For Fun"
   },
   {
-    name: "Alarad",
-    type: "external",
-    link: "https://www.alaradcapital.com/",
-    bg: "#27331d",
-    text: "#bd8e65",
-    img: "./../../img/work/alarad-peek.png",
-    alt: "Green and gold geometric designs of Alarad brand kit",
-    label: "View Alarad project",
-    tags: "Development, Motion Design, Animation, Wordpress, Completed"
-  },
-  {
-    name: "Automic Gold",
-    type: "external",
-    link: "https://www.automicgold.com/",
-    bg: "#FCE1E6",
-    text: "#18084d",
-    img: "./../../img/work/ag-peek.png",
-    alt: "Close up of hand wearing Automic Gold products",
-    label: "View Automic Gold project",
-    tags: "Development, Site Maintenance, Accessibility, Performance, Shopify, Ongoing"
-  },
-  {
-    name: "Steel Root",
-    type: "external",
-    link: "https://steelroot.us/",
-    bg: "#181d40",
-    text: "#01adcb",
-    img: "./../../img/work/sr-peek.png",
-    alt: "Cyborg with glowing eyes",
-    label: "View Steel Root project",
-    tags: "Development, Accessibility, Performance, Wordpress, Completed"
-  },
-  {
     name: "DriveForce",
     type: "external",
     link: "https://driveforce.golf",
@@ -244,17 +256,6 @@ const workData = [
     alt: "A man swinging a golf club adorned with a semicircular graphic to accentute the swing motion",
     label: "View DriveForce project",
     tags: "Development, Animation, Ecommerce, Wordpress, Completed"
-  },
-  {
-    name: "TransHealth",
-    type: "external",
-    link: "https://www.transhealth.org/",
-    bg: "#96b0c5",
-    text: "#2a275b",
-    img: "./../../img/work/th-peek.png",
-    alt: "The Transhealth logo",
-    label: "View Transhealth project",
-    tags: "UX Research, Development, Accessibility, Wordpress, Completed"
   },
   {
     name: "ThinkForward",
