@@ -34,7 +34,7 @@ const TransHealth = () => {
                     <Heading>Project Vision</Heading>
                     <p>
                         Transhealth is an up-and-coming health organization in Western Massachusetts seeking to expand access to
-                        trangender-friendly medical services outside of major metropolitan areas. Ahead of the opening of their 
+                        transgender-friendly medical services outside of major metropolitan areas. Ahead of the opening of their 
                         clinic in Northampton, the founders of this organization wanted to establish a strong digital presence through 
                         a web application that would give future patients quick, intuitive access to resources they need as well as solve 
                         for pre-existing pain points specific to the trans user experience in digital medical spaces.
@@ -92,8 +92,8 @@ const TransHealth = () => {
                         <p>
                             Multiple respondents commented that past trans clinics they had visited were more often than not profit-focused
                             "boutique healthcare facilit[ies] for skinny white nonbinary people with expensive insurance plans" rather than community-focused,
-                            instersectional, and financially accessible. This attitude of profit and exclusivity can manifest in ways varying from the obvious (limited 
-                            insurance offerings outlined, no mention of financial assistance), to the more nuanced (photography choices limited to narrow and unrepresentative
+                            intersectional, and financially accessible. This attitude of profit and exclusivity can manifest in ways varying from the obvious (limited 
+                            insurance offerings outlined, no mention of financial assistance), to the more nuanced (photography choices limited to a narrow and unrepresentative
                             window of the community). 
                         </p>
                     </PinkBlock>
@@ -103,7 +103,7 @@ const TransHealth = () => {
                     <Heading>Meet the Users</Heading>
                     
                     <p>
-                        After presenting the client, my team synthesized the results of my research into two primary user personas, as well as a 
+                        Before presenting to the client, my team synthesized the results of my research into two primary user personas, as well as a 
                         secondary user community of parents, providers, and those who may be gender questioning.
                     </p>
 
@@ -131,7 +131,7 @@ const TransHealth = () => {
                     <p>
                         We addressed the needs of those who wanted to complete their intended task and leave as soon as possible by positioning access to the 
                         Patient Portal front, center, and loud in the navigation. We also positioned navigation to resources for new intake above the fold of
-                        the home page to keep essential navigation clear and quick.
+                        the home page to show the user our best guess on what they need within their first look.
                     </p>
 
                     <img alt="" src={HomeFlow} />
@@ -151,6 +151,12 @@ const TransHealth = () => {
                     </p>
 
                     <img alt="" src={Resources} />
+
+                    <p>
+                        For those looking to forge connections within the community, we outfitted the site with an events tool that connected to Eventbrite, Facebook,
+                        and Google Calendar so that after the pandemic, users could easily make plans to engage socially and add event information to their calendar before
+                        they had a chance to forget.
+                    </p>
                 </RichText>
 
                 <RichText>
@@ -178,7 +184,7 @@ const TransHealth = () => {
                         Since <a target="_BLANK" href="https://www.gazettenet.com/Trans-Health-center-opens-in-Northampton-40244480">opening</a> in May of 2021, 
                         Transhealth has already made a tangible impact on access to care outside of New England's urban communities as well as an ideological impact
                         on how transgender medical care is viewed through <a target="_BLANK" href="https://www.wbur.org/radioboston/2021/09/16/masshealth-transgender-care">consistent media engagement</a> on 
-                        trans issues.
+                        trans issues. I couldn't be more proud to have contributed to this project!
                     </p>
                 </RichText>
             </Content>
