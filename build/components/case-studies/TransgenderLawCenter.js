@@ -89,18 +89,6 @@ const TLC = () => {
   })), /* @__PURE__ */ React.createElement(RichText, null, /* @__PURE__ */ React.createElement(Heading, null, "Conclusion"), /* @__PURE__ */ React.createElement("p", null, "This project married a number of individual skills I had been cultivating separately into one effort. Beyond the more obvious technical opportunities for learning (specifically with Adobe InDesign), my work on this initiative provided invaluable experience with creating cohesive visual identities across numerous platforms and mediums. I look forward to doing more work like this in the future!"))));
 };
 export default TLC;
-const MobileImg = styled.img`
-    display: block;
-    @media (min-width: 768px){
-        display: none;
-    }
-`;
-const DesktopImg = styled.img`
-    display: none;
-    @media (min-width: 768px){
-        display: block;
-    }
-`;
 const Wrapper = styled.div`
     color: #000;
     background-color: #fff;
@@ -115,8 +103,14 @@ const Hero = styled.div`
     text-align: center;
 
     h1 {
-        font-size: 10rem;
+        font-size: 3rem;
         color: #2C493A;
+        @media(min-width: 768px){
+            font-size: 7rem;
+        }
+        @media(min-width: 992px){
+            font-size: 10rem;
+        }
     }
 `;
 const Details = styled.div`

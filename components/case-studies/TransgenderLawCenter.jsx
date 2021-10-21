@@ -196,20 +196,6 @@ const TLC = () => {
 
 export default TLC;
 
-const MobileImg = styled.img `
-    display: block;
-    @media (min-width: 768px){
-        display: none;
-    }
-`
-
-const DesktopImg = styled.img `
-    display: none;
-    @media (min-width: 768px){
-        display: block;
-    }
-`
-
 const Wrapper = styled.div `
     color: #000;
     background-color: #fff;
@@ -225,8 +211,14 @@ const Hero = styled.div`
     text-align: center;
 
     h1 {
-        font-size: 10rem;
+        font-size: 3rem;
         color: #2C493A;
+        @media(min-width: 768px){
+            font-size: 7rem;
+        }
+        @media(min-width: 992px){
+            font-size: 10rem;
+        }
     }
 `
 
