@@ -164,6 +164,17 @@ const WorkBlock = styled(motion.li)`
 
 const workData = [
     {
+        name: "Transgender Law Center",
+        slug: "transgender-law-center",
+        type: "internal",
+        link: "",
+        bg: "#2C493A",
+        text: "#eba19e",
+        img: "./../../img/work/tlc-peek.png",
+        label: "View Transgender Law Center project",
+        tags: "Graphic Design, Print Design, Web Design, Accessibility, Completed"
+    },
+    {
         name: "TransHealth",
         slug: "transhealth",
         type: "internal",
@@ -244,16 +255,6 @@ const workData = [
         label: "View Steel Root project",
         tags: "Design, Development, Accessibility, Performance, Wordpress, Completed"
     },
-    /* {
-        name: "Odd Meter",
-        type: "internal",
-        link: "",
-        bg: "#ef6464",
-        text: "#eba19e",
-        img: "",
-        label: "View Odd Meter project",
-        tags: "Design, Illustration, Social Media, Brand Strategy"
-    }, */
     {
         name: "Brutalist Dunks",
         slug: "brutalist-dunks",

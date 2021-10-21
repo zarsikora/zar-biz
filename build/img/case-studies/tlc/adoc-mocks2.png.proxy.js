@@ -1,0 +1,1 @@
+export default "/img/case-studies/tlc/adoc-mocks2.png";

@@ -154,6 +154,17 @@ const WorkBlock = styled(motion.li)`
 `;
 const workData = [
   {
+    name: "Transgender Law Center",
+    slug: "transgender-law-center",
+    type: "internal",
+    link: "",
+    bg: "#2C493A",
+    text: "#eba19e",
+    img: "./../../img/work/tlc-peek.png",
+    label: "View Transgender Law Center project",
+    tags: "Graphic Design, Print Design, Web Design, Accessibility, Completed"
+  },
+  {
     name: "TransHealth",
     slug: "transhealth",
     type: "internal",

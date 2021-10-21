@@ -16,6 +16,7 @@ import LesFleursDeMars from './case-studies/LFDM';
 import BrutalistDunks from './case-studies/BrutalistDunks';
 import Parafactory from './case-studies/Parafactory';
 import TransHealth from './case-studies/TransHealth';
+import TLC from './case-studies/TransgenderLawCenter';
 //Components
 import AudioButton from './AudioButton';
 import Sprite from './Sprite';
@@ -80,6 +81,9 @@ const App = () => {
                             </Route>
                             <Route path="/brutalist-dunks">
                                 <BrutalistDunks />
+                            </Route>
+                            <Route path="/transgender-law-center">
+                                <TLC />
                             </Route>
                         </Switch>
                     </AnimatePresence>

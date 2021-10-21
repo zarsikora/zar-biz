@@ -1,0 +1,1 @@
+export default "/img/case-studies/tlc/ig-med.png";

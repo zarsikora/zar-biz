@@ -1,0 +1,1 @@
+export default "/img/case-studies/tlc/tertiary-graphics-05.png";
